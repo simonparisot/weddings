@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Audrey & Simon | Liste de mariage</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/freelancer.min.css" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129355826-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129355826-2');
+  </script>
+
+
+</head>
+
+<body id="page-top">
+
+  <div class="cmodal-container modal-stdItem">
+    <div class="cmodal">
+      <header>
+        <span class="cmodal-close modalClose"></span>
+        <div class="cm-logo-wrapper-container">
+          <div class="cm-logo-wrapper">
+            <div class="cm-logo-border"></div>
+            <div class="cm-logo"></div>
+          </div>
+        </div>
+        <h1>Merci beaucoup !</h1>
+        <h2>Laissez nous un petit message :)</h2>
+      </header>
+      <form>
+        <textarea placeholder="Votre message..." id="customMsg"></textarea>
+        <input type="hidden" name="id" id="stdMsgId" value="">
+        <button class="thanks">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="cmodal-container modal-customItem">
+    <div class="cmodal">
+      <header>
+        <span class="cmodal-close modalClose"></span>
+        <div class="cm-logo-wrapper-container">
+          <div class="cm-logo-wrapper">
+            <div class="cm-logo-border"></div>
+            <div class="cm-logo"></div>
+          </div>
+        </div>
+        <h1>Un cadeau personnalisé</h1>
+        <h2>Bon plan ou idée farfelue</h2>
+      </header>
+      <form>
+        <textarea placeholder="Votre idée..." id="customIdea"></textarea>
+        <input type="number" name="amount" placeholder="Montant (en €)" id="customAmount">
+        <span class="errorMsg"></span>
+        <button class="paybutton">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="cmodal-container modal-thanks">
+    <div class="cmodal">
+      <header>
+        <span class="cmodal-close modalClose"></span>
+        <div class="cm-logo-wrapper-container">
+          <div class="cm-logo-wrapper">
+            <div class="cm-logo-border"></div>
+            <div class="cm-logo"></div>
+          </div>
+        </div>
+        <h1>Merci beaucoup !</h1>
+        <h2>🤩</h2>
+      </header>
+      <form>
+        <p>Un très grand merci pour votre cadeau. Soyez sûr que nous vous en enverrons un souvenir depuis l'Indonésie !</p>
+        <p>A très bientôt.</p>
+        <p>Audrey  et Simon</p>
+        <button class="modalClose">Revenir</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="loader"><img src="img/loader2.gif"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Audrey & Simon</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead bg-primary text-black text-center">
+    <div class="container">
+      <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+      <h1 class="mb-0">Notre liste de mariage</h1>
+      <hr class="star-dark">
+      <h2 class="font-weight-light mb-0">
+        <p>Chers amis, après 10 ans de vie commune, nous n'avons plus vraiment besoin de vaisselle ! Notre plus grand plaisir serait de partir en Lune de Miel en Indonésie en pensant à vous 😊</p>
+        <p>Si vous souhaitez nous faire un cadeau, vous trouverez ci-dessous quelques éléments de notre voyage de noces que vous pouvez nous offrir.</p>
+        <p>Un grand merci 😍</p>
+      </h2>
+    </div>
+  </header>
+
+  <!-- Portfolio Grid Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="100" reldesc="1 000km en avion">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Avion.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">1 000 km en avion pour partir au bout du monde</div>
+                  pour le retour on verra...
+                </div>
+              <div class="item-price">100€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="80" reldesc="Des bagages assortis">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Baggage.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Des bagages assortis</div>
+                  pour frimer à l'aéroport
+                </div>
+              <div class="item-price">80€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="30" reldesc="2 coupes de champagne">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Champagne.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Deux coupes de champagne sur la plage</div>
+                  en trinquant à votre santé
+                </div>
+              <div class="item-price">30€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="20" reldesc="Deux cocktails">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Cocktails.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Deux cocktails à partager au bord de la piscine</div>
+                  en réfléchissant à comment expliquer à nos boss qu'on ne revient pas ;)
+                </div>
+              <div class="item-price">20€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="10" reldesc="Une crème solaire">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Creme.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Une bonne crème solaire</div>
+                  pour ne pas rôtir comme des poulets ou être confondus avec des écrevisses
+                </div>
+              <div class="item-price">10€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="70" reldesc="Des chaussures de marche">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Chaussures.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Des chaussures de marche</div>
+                  pour Audrey
+                </div>
+              <div class="item-price">70€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="120" reldesc="Une balade à dos d'éléphant">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Elephant.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Une balade à dos d'éléphant</div>
+                  pour chanter à tue-tête du Colonel Hathi !
+                </div>
+              <div class="item-price">120€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="180" reldesc="2 jours sur une île">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Ile.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Deux jours sur une île déserte</div>
+                  avec un caméraman pour se croire à Koh-Lanta
+                </div>
+              <div class="item-price">180€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="25" reldesc="Un guide d'Indonésie">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Guide.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Un guide d'Indonésie</div>
+                  parce que pour aller d'île en île notre sens de l'orientation ne suffira jamais !
+                </div>
+              <div class="item-price">25€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="160" reldesc="Une nuit d'hôtel">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Hotel.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Une nuit dans un hôtel de rêve</div>
+                  pour se la couler douce
+                </div>
+              <div class="item-price">160€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="150" reldesc="Du matériel de plongée">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Matos.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Du (bon) matériel de plongée</div>
+                  pour partir en vadrouille au fond de l'océan
+                </div>
+              <div class="item-price">150€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="40" reldesc="Un petit-déjeuner au lit">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Ptidej.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Un petit-déjeuner au lit</div>
+                  pour bien commencer la journée
+                </div>
+              <div class="item-price">40€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="50" reldesc="Transport sur place">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Van.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Le transport sur place</div>
+                  avec beaucoup de place sur le toit, toujours pour ces fichues valises
+                </div>
+              <div class="item-price">50€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto paybutton" relprice="100" reldesc="Une plongée">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Plongee.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Une sortie en plongée</div>
+                  avec notre beau matériel tout neuf !
+                </div>
+              <div class="item-price">100€</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="portfolio-item d-block mx-auto modal-item customItem" href= "#portfolio-modal-1">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-gift"></i> Offrir
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/surprise.jpg" alt="">
+            <div class="portfolio-item-footer mx-auto">
+                <div class="item-desc">
+                  <div class="item-title">Un cadeau personnalisé</div>
+                  bon plan ou idée farfelue !
+                </div>
+              <div class="item-price">? €</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Fait avec <i class="fas fa-heart"></i> par Audrey et Simon</small>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.min.js"></script>
+
+  <!-- Custom scripts for payment -->
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <script src="js/payment.min.js"></script>
+
+</body>
+
+</html>
