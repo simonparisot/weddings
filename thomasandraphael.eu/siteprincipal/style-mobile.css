@@ -1,0 +1,38 @@
+@media (orientation: portrait), (max-width: 800px) {
+
+	.nomobile { display: none; }
+	section {
+		padding: 60px 10%;
+		font-size: 1.2rem; 
+	}
+	section h1 { font-size: 3rem; }
+	section h2 { font-size: 2rem; }
+	section h3 { font-size: 2rem; }
+
+	.savethedate { position: relative; top: 2rem; left: 0; }
+	.savethedate img { width: 100%; }
+	.savethedate p { 
+		font-size: 1rem;
+		margin: 10px 0 0 0; 
+		letter-spacing: 0; 
+		text-align: center;
+	}
+	
+	section:nth-of-type(1):before {
+		background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35) 100%), darkgrey url("img/background.jpg") 75%/cover no-repeat;
+	}
+
+	footer.section {
+		font-size: 1rem;
+		text-align: left;
+	}
+	
+	.vcard { 
+		display: block;
+		margin: 10px 0; 
+		font-size: 1rem;
+	}
+
+	.vcard img { width: 4.5rem; }
+
+}

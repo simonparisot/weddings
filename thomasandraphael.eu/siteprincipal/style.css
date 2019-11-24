@@ -1,0 +1,140 @@
+@font-face {
+	font-family: 'Athletics';
+	src: url('fonts/athletics-regular.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Athletics';
+	src: url('fonts/athletics-bold.otf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Stray Bullets';
+	src: url('fonts/straybullets-smooth.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* GENERIC STYLE
+-------------------------------------------------- */
+
+body { background-color: #000; margin: 0; padding: 0; }
+a { text-decoration: underline; color: inherit; }
+
+section {
+	position: relative;
+	z-index: 2;
+	font: 1.6rem "Athletics", sans-serif;
+	padding: 80px 20%;
+
+}
+
+section h1 { font: 5rem "Stray Bullets", cursive, sans-serif; margin: 0 0 20px 0; }
+section h2 { font: 3.5rem "Stray Bullets", cursive, sans-serif; margin: 0; }
+section h3 { font: 2rem "Stray Bullets", cursive, sans-serif; }
+
+.btnLg { 
+	padding: 15px 30px;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    background-color: #fff000;
+    font: 1.6rem "Athletics", sans-serif;
+    border: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+}
+
+/* SECTIONS
+-------------------------------------------------- */
+
+section:nth-of-type(1) { height: 100vh; }
+
+section:nth-of-type(1):before {
+	content: "";
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+	background: 
+		linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35) 30%, rgba(0,0,0,0) 45%), 
+		darkgrey url("img/background.jpg") center/cover no-repeat;
+}
+
+section:nth-of-type(2) { background: #ffe953; padding-bottom: 50px; padding-top: 50px; }
+
+section:nth-of-type(3) { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), darkgrey url("img/bruxelles.jpg") center/cover no-repeat; }
+section:nth-of-type(3) h1 { color: white; text-shadow: 1px 1px 2px #222; }
+section:nth-of-type(3) p { color: white; }
+
+section:nth-of-type(4) { background: #fff url("img/seigaiha.png") repeat; }
+.vcard { 
+	display: inline-block;
+	vertical-align: top; 
+	box-sizing: border-box;
+	margin: 10px; 
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	background: rgba(255, 255, 255, 0.6);
+	font-size: 1.2rem;
+}
+
+.vcard img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 5.5rem;
+    border-radius: 200px;
+    margin-right: 15px;
+}
+.vcard div { display: inline-block; vertical-align: middle; }
+
+section:nth-of-type(5) { background: darkgrey url("img/beach.jpg") no-repeat center/cover; }
+section:nth-of-type(5) h1 { color: white; text-shadow: 1px 1px 2px #222; }
+
+section:nth-of-type(6) { 
+	background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) ), white url("img/clothes.jpg") repeat;
+	border: 1px solid #eee;
+}
+
+.dresscode {
+	padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.6);
+}
+.dresscode li { margin-bottom: 7px; }
+
+section:nth-of-type(7) { background: #ffe953; padding-bottom: 50px; padding-top: 50px; }
+
+section:nth-of-type(8) { 
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), darkgrey url("img/coffee.jpg") center/cover no-repeat;
+	color: #ffffff;
+}
+
+footer {
+	position: relative;
+	background-color: #1a252f;
+	color: #fff;
+	text-align: center;
+	padding-top: 20px; padding-bottom: 20px;
+	font: 1.2rem "Athletics", sans-serif;
+	z-index: 2;
+}
+
+footer .fas { margin: 0 5px; }
+
+.savethedate { position: absolute; top: 4rem; left: 4rem; }
+.savethedate img { width: 50%; margin-bottom: 3.5rem; }
+.savethedate p {
+	margin: 10px 0 0 40px;
+	color: #ffe953;
+	letter-spacing: .05rem;
+}
