@@ -19,7 +19,7 @@
 	}
 	
 	section:nth-of-type(1):before {
-		background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35) 100%), darkgrey url("img/background.jpg") 75%/cover no-repeat;
+		background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35) 100%), darkgrey url("img/background2.jpg") 75%/cover no-repeat;
 	}
 
 	footer.section {
