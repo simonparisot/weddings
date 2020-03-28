@@ -63,6 +63,7 @@
 
   $('.customItem').on("click", function() {
     $('.modal-customItem').show();
+    window.item = $(this).find(".portfolio-item-footer").text();
   });
 
   $('.thanks').on("click", function() {

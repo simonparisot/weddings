@@ -4,8 +4,27 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
 
+@font-face {
+  font-family: 'Athletics';
+  src: url('../../fonts/athletics-regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Athletics';
+  src: url('../../fonts/athletics-bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stray Bullets';
+  src: url('../../fonts/straybullets-smooth.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Lato';
+  font-family: 'Athletics';
 }
 
 h1,
@@ -14,8 +33,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
-  font-family: 'Montserrat';
+  font-weight: normal;
+  font-family: 'Stray Bullets';
 }
 
 hr.star-light,
@@ -49,7 +68,7 @@ hr.star-light {
 
 hr.star-light:after {
   color: #fff;
-  /*background-color: #fff000;*/
+  /*background-color: #ffe953;*/
 }
 
 hr.star-dark {
@@ -112,6 +131,7 @@ section h2 {
 
 #mainNav .navbar-brand {
   color: #000;
+  font-family: "Stray Bullets", cursive;
 }
 
 #mainNav .navbar-nav {
@@ -124,7 +144,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #fff000;
+  color: #ffe953;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
@@ -132,7 +152,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #fff000;
+  color: #ffe953;
 }
 
 #mainNav .navbar-toggler {
@@ -151,18 +171,19 @@ section h2 {
     font-size: 2.5em;
     -webkit-transition: font-size 0.3s;
     transition: font-size 0.3s;
-    font-family: "Montez", cursive;
+    font-weight: normal;
+    font-family: "Stray Bullets", cursive;
   }
   #mainNav .navbar-nav {
     margin-top: 0;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #fff000;
+    background: #ffe953;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #fff000;
+    background: #ffe953;
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -182,12 +203,13 @@ header.masthead {
 header.masthead h1 {
   font-size: 6rem;
   line-height: 0.7;
-  font-family: "Montez", cursive;
+  font-weight: normal;
+  font-family: "Stray Bullets", cursive;
 }
 
 header.masthead h2 {
   font-size: 1.3rem;
-  font-family: 'Lato';
+  font-family: 'Athletics';
 }
 
 @media (min-width: 992px) {
@@ -232,21 +254,20 @@ header.masthead h2 {
 }
 
 .portfolio-item-footer {
+  display: table;
+  width: 100%;
+  min-height: 100px;
   padding: 15px;
   background: #eee;
   color: #111;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 101px;
-  font-size: 0.8rem;
-  font-family: montserrat;
-  text-decoration: none;
-  line-height: 1.1;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
-.portfolio-item-footer .item-desc .item-title { font-weight: bold; font-size: 1.1rem; margin-bottom: 5px; }
-.portfolio-item-footer .item-price { float: right; font-size: 1.6rem; font-weight: bold; color: #111; margin-left: 10px;}
+.portfolio-item-footer p {
+  display: table-cell;
+  vertical-align: middle;
+}
 
 @media (min-width: 576px) {
   .portfolio {
@@ -339,7 +360,7 @@ header.masthead h2 {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #fff000;
+  color: #ffe953;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -380,11 +401,11 @@ a:focus, a:hover, a:active {
 }
 
 .bg-secondary {
-  background-color: #FFF000 !important;
+  background-color: #ffe953 !important;
 }
 
 .text-primary {
-  color: #fff000 !important;
+  color: #ffe953 !important;
 }
 
 .text-secondary {
@@ -392,8 +413,8 @@ a:focus, a:hover, a:active {
 }
 
 .btn-primary {
-  background-color: #fff000;
-  border-color: #fff000;
+  background-color: #ffe953;
+  border-color: #ffe953;
   padding-right: 2rem;
   padding-left: 2rem;
 }
@@ -404,8 +425,8 @@ a:focus, a:hover, a:active {
 }
 
 .btn-secondary {
-  background-color: #fff000;
-  border-color: #fff000;
+  background-color: #ffe953;
+  border-color: #ffe953;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
@@ -474,7 +495,7 @@ a:focus, a:hover, a:active {
   left: 0;
 }
 .cm-logo { 
-  background-image: url("../img/profile.png");
+  background-image: url("../img/portfolio/resized/gift.jpg");
   width: 64px;
   height: 64px;
   margin: 3px;
@@ -547,3 +568,9 @@ a:focus, a:hover, a:active {
 ::placeholder { color: #ccc; }
 
 .errorMsg { margin-top: 10px; display: block; color: red; }
+
+.profilepic {
+    width: 300px;
+    border-radius: 1000px;
+    border: 10px solid #ffe953;
+}

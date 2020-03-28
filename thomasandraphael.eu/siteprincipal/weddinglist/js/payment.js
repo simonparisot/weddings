@@ -32,11 +32,11 @@ function processPayment(token) {
 
                 // popup to leave a message
                 $('#stdMsgId').val(id);
-                $('.modal-stdItem').show();
+                $('.modal-thanks').show();
 
             } else {
                 // problem while processing payment
-                alert("Désolé, il y a eu un problème dans le traitement de votre paiement. Aucune somme n'a été débitée. Nous vons invitons à réessayer ou bien à nous contacter directement : audreyetsimon.p@gmail.com")
+                alert("Sorry, there has been a problem with your payment. No amount has been debited. We invite you to make a direct transfer to our account (IBAN : BE37 7350 5282 0528) or to contact us directly: tomxster@gmail.com");
                 document.getElementById("loader").style.display = "none";
             }
         }
@@ -50,7 +50,7 @@ function processPayment(token) {
 // handle Checkout payment
 var handler = StripeCheckout.configure({
 	key: 'pk_live_a1RE9seMvw4wYUEs9SiGLl5h',
-	image: 'img/profile.png',
+	image: 'img/portfolio/resized/gift.jpg',
 	locale: 'fr',
 	token: function(token) {
 		processPayment(token);
@@ -62,18 +62,8 @@ Array.prototype.forEach.call(els, function(el) {
 	el.addEventListener('click', function(e) {
 
 		// setting global variables
-		//window.price = this.attributes.relprice.value*100;
-		//window.item = this.attributes.reldesc.value;
-		window.price = 100*$(this).attr('relprice');
-		window.item = $(this).attr('reldesc');
-
-		// For some browsers, `attr` is undefined; for others,
-		// `attr` is false.  Check for both.
-		if (typeof window.item !== typeof undefined && window.item !== false && window.item !== "" && window.item !== 0) {
-		}else{
-			window.price = 100*$('#customAmount').val();
-			window.item = $('#customIdea').val();
-		}
+		window.price = 100*$('#customAmount').val();
+		item += " : " + $('#customIdea').val();
 
 		if (window.price == 0 || window.item == "") {
 			$('.errorMsg').html('Certains champs sont vides');
@@ -81,7 +71,7 @@ Array.prototype.forEach.call(els, function(el) {
 			// display checkout popup
 			$('.cmodal-container').hide();
 			handler.open({
-				name: "Liste de mariage A&S",
+				name: "Wedding list T&R",
 				description: window.item,
 				currency: 'eur',
 				amount: window.price,

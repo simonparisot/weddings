@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
 
@@ -21,7 +23,14 @@
 
 	  gtag('config', 'UA-129355826-1');
 	</script>
-
+	<script type="text/javascript">
+		function openLang(lang) {
+			document.getElementsByClassName('lang-en')[0].style.display = "none";
+			document.getElementsByClassName('lang-fr')[0].style.display = "none";
+			document.getElementsByClassName('lang-nl')[0].style.display = "none";
+			document.getElementsByClassName('lang-' + lang)[0].style.display = "block";
+		}
+	</script>
 
 </head>
 <body>
@@ -31,8 +40,8 @@
 	<div class="savethedate">
 		<img src="img/title2.png">
 		<p>The official website<sup>®©</sup> of the wedding</p>
-		<p>Website permanently under construction</p>
-		<p>Last updated on November 17, 2019</p>
+		<p>Le site est en surtout en anglais, entrainez-vous ce sera pareil pour le mariage ;)</p>
+		<p>De website is momenteel alleen in het Engels, een goede oefening aangezien de hele ceremonie Engelstalig zal zijn ;)</p>
 	</div>
 
 </section>
@@ -41,9 +50,44 @@
 
 <section class="section">
 	
-	<h1>Welcome!</h1>
-	<p>
-		Via this website we provide you with some additional information on our wedding plans. We will add new information to this website gradually and frequently. Do not worry to miss out on anything important, we will also contact you by mail in case of any major changes.
+	<h1>Breaking news!</h1>
+
+	<button class="btn-lang" onclick="openLang('en')">🇬🇧</button>
+	<button class="btn-lang" onclick="openLang('fr')">🇫🇷</button>
+	<button class="btn-lang" onclick="openLang('nl')">🇳🇱</button>
+
+	<p class="sct-lang lang-en">
+		<b>Friday the 28th of February:</b><br>
+		Already in Brussels and up for a preparatory drink? Join us as from 20h00 @Contrebande, 6 Place Fernand Cocq, 1050 Ixelles.
+		<br><br>
+		<b>Saturday the 29th of February (OMG who chose this awesome date?):</b><br>
+		We are happy to welcome you for all festivities as from 16h00 @ La Tricoterie, Rue Théodore Verhaegen 158, 1060 Saint-Gilles. Our wedding ceremony starts at 17h00 sharp.
+		<br><br>
+		<b>Sunday the 1st of March:</b><br>
+		For those recovering from an awesome party but thrown out of their hotel: we are happily inviting all our wedding guests for a brunch. You are welcome as from 11h00 @ 157 Rue Franz Merjay, 1050 Ixelles. Come at the time that suits your schedule, you might even avoid cuing at the coffee machine ;)
+	</p>
+
+	<p class="sct-lang lang-nl">
+		<b>Vrijdag 28 februari:</b><br>
+		Al in Brussel en zin in een drankje om in de stemming te komen? Kom vanaf 20u00 @ Contrebande, Fernand Cocqplein 6, 1050 Elsene.
+		<br><br>
+		<b>Zaterdag 29 februari (OMG wie heeft deze geweldige datum gekozen?):</b><br>
+		We verwelkomen je graag voor alle festiviteiten vanaf 16.00 uur @ La Tricoterie, Théodore Verhaegenstraat 158, 1060 Sint-Gillis. De huwelijksceremonie begint om stipt 17.00 uur.
+		<br><br>
+		<b>Zondag 1 maart:</b><br>
+		Voor diegenen die nog willen herstellen van een geweldig feest, maar toch al uit hun hotel worden gegooid: we nodigen al onze bruiloftsgasten graag uit voor een rustige brunch. Je bent welkom vanaf 11.00 uur @ 157 Rue Franz Merjay, 1050 Elsene. Kom op het tijdstip dat jou goed uitkomt, zo hoef je niet in rij voor het koffiezetapparaat ;)
+	</p>
+
+	<p class="sct-lang lang-fr">
+		<b>Vendredi 28 février :</b><br>
+		Déjà à Bruxelles et prêts pour un verre préparatoire le vendredi soir ? Rejoignez-nous à 20h00 à la @contrebande, 6 place Fernand Cocq, 1050 Ixelles. 
+		<br><br>
+		<b>Samedi 29 février : le grand jour, la date des 4 années à venir:</b><br>
+		Vous êtes les bienvenus à partir de 16h à la Tricoterie, 158 rue Théodore Verhaegen, 1060 Saint Gilles
+		Notre cérémonie laïque commence à 17h précise
+		<br><br>
+		<b>Dimanche 1er mars :</b><br>
+		Pour ceux qui récupèrent des festivités mais qui se retrouvent mis à la porte de leur hotel pour le check out sont les bienvenus dès 11h au 157 rue Franz Merjay, 1050 Ixelles pour un brunch. Venez quand vous voulez, à votre aise, on vous attendra là-bas.
 	</p>
 
 </section>
@@ -54,10 +98,11 @@
 	
 	<h1>The very beginning</h1>
 	<p>
-		On the evening of June 29, 2017, we met for a first drink at a Brussels rooftop bar. Raphaël, afraid to impress Thomas by wearing his work suit, went home to change into jeans just before. Thomas realised only upon arrival he had been waiting for a giant. Without having finished our first drink, we were spotted by some of Thomas’ friends.  
+		On the evening of June 29, 2017, we met for a first drink at a Brussels rooftop bar.
+On the evening on the 29th of February, 2020 we plan on celebrating with you our commitment to spend the rest of our years together, and share our future adventures together.
 	</p>
 	<p>
-		Not long after, Raphaël passed by the family Andre’s house to finish some of the last champagne served at Julien & Fayda their engagement party. Thomas secretly tasted a piece of Julie & Marwin their wedding cake brought by Raphaël after their wedding. It would not take us long before we committed to sharing our lives together, engaged to be engaged.
+		We welcome all those who played a part, big or small, in the chain of events that lead us to taking this big step forward, into the unknown.
 	</p>
 
 </section>
@@ -102,10 +147,10 @@
 		</div>
 	</div>
 
-	<p>
+	<!--p>
 		You want to know who's gonna be there? The following invitees have confirmed to witness & celebrate our wedding:
 	</p>
-	<a href="https://thomasandraphael.eu/guestlist.html"><button class="btnLg">The guestlist</button></a>
+	<a href="https://thomasandraphael.eu/guestlist.html"><button class="btnLg">The guestlist</button></a-->
 
 </section>
 
@@ -154,7 +199,7 @@
 
 <section>
 	<h1>The brunch</h1>
-	<p>All our guests are invited for a relaxed and informal brunch on Sunday March 1, 2020 at the family Andre house in Ixelles-Brussels. More information about this brunch will be available soon.</p>
+	<p>All our guests are invited for a relaxed and informal brunch on Sunday March 1, 2020 at the family Andre house in Ixelles-Brussels. More information about this brunch at the top of the page!</p>
 </section>
 
 
@@ -162,8 +207,6 @@
 <footer>
 	Made with <i class="fas fa-heart"></i> by <a href="mailto:parisot.simon@gmail.com">Simon</a> for Thomas and Raphaël<br>
 </footer>
-
-
 
 </body>
 </html>
