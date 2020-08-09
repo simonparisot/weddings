@@ -9,18 +9,9 @@
 	section h2 { font-size: 2rem; }
 	section h3 { font-size: 2rem; }
 
-	.savethedate { position: relative; top: 2rem; left: 0; }
+	section:nth-of-type(1) { padding: 1rem; }
+
 	.savethedate img { width: 100%; }
-	.savethedate p { 
-		font-size: 1rem;
-		margin: 10px 0 0 0; 
-		letter-spacing: 0; 
-		text-align: center;
-	}
-	
-	section:nth-of-type(1):before {
-		background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35) 100%), darkgrey url("img/background2.jpg") 75%/cover no-repeat;
-	}
 
 	footer.section {
 		font-size: 1rem;
