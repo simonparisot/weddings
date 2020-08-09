@@ -1,16 +1,26 @@
-# Repo des projets du mariage
+# Les sites de mariage de Simon :)
 
-Contient les projets IT que j'ai réalisé pour le mariage, en juin 2019.
+Contient les différents sites de mariage que j'ai réalisé
 
 ## [audreyetsimon.fr](https://audreyetsimon.fr)
 
-La landing page principale, réalisé en custom.
+Mon mariage, juin 2019.
+Réalisation custom sans framework.
+Hébergé sur S3.
 
-## [liste.audreyetsimon.fr](https://liste.audreyetsimon.fr)
+## [thomasandraphael.eu](https://thomasandraphael.eu)
 
-Liste de mariage, développée à partir d'un template Bootstrap, avec intégration d'un paiement via Stripe, et d'un lambda de stockage en dynamoDB.
-Contient également la fonction Lambda pour la validation des paiements Stripe.
+Mariage de Thomas et Raphaël, février 2020
+Réalisation custom sans framework.
+Hébergé sur S3.
 
-## [simonetaudrey.fr](https://simonetaudrey.fr)
+## [dianeetguillaume.fr](https://dianeetguillaume.fr)
 
-Copie partielle de la vraie landing page, réalisée juste pour la soirée du 20 juin 2019
+Mariage de Diane et Guillaume, 2021
+Réalisation custom sans framework.
+Hébergé sur S3
+
+
+## LambdaPaymentStripe
+
+Serverless payment function using Stripe.
