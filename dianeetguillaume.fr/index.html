@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="fr">
 
 <head>
 
@@ -7,12 +7,10 @@
 	<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
 
 	<title>Diane & Guillaume</title>
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="stylesheet" type="text/css" href="style.css?v2.0.3">
 	<link rel="stylesheet" type="text/css" href="style-mobile.css?v2.0.3">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129355826-1"></script>
@@ -30,57 +28,178 @@
 <section>
 	
 	<div class="savethedate">
-		<img src="img/title2.png">
-		<p>
-			Juin 2021 - Eglise St François Xavier
-		</p>
+		<img id="title" src="img/title.png">
+		<img id="subtitle" src="img/subtitle.png">
 	</div>
 
 </section>
-
-
-<section class="section s-info">
-
-	<div>
-		<h1 class="title">Quel est le programme ?</h1>
-		
-		<div class="info left">
-			<h2 class="subtitle">Mairie</h2>
-			<p>Nous nous marierons le lundi 17 juin à la mairie du 7ème arrondissement.</p>
-		</div>
-		
-		<div class="info right">
-			<h2 class="subtitle">Cérémonie</h2>
-			<p>La cérémonie se déroulera le samedi 29 juin à 16h00, dans le magnifique Château du Meux, dans l'Oise.</p>
-		</div>
-		
-		<div class="info left">
-			<h2 class="subtitle">Cocktail et dîner</h2>
-			<p>Dès 17h00, ambiance plus détendue autour d'une flûte de champagne, d'une pièce-montée puis d'une piste de danse... jusqu'au matin !</p>
-		</div>
-		
-		<div class="info right">
-			<h2 class="subtitle">Brunch</h2>
-			<p>Toute la journée du dimanche, venez profiter avec nous du soleil, du parc et des dernières bouteilles de champagne.</p>
-		</div>
-	</div>
-
-</section>
-
-
 
 
 <section>
+
+	<h1 class="title">Quel est le programme ?</h1>
 	
-	<h1>Y a-t-il une liste de mariage ?</h1>
-	<a href="https://thomasandraphael.eu/weddinglist/index.html"><button class="btnLg">Oui, juste ici 😌</button></a>
+	<div class="info left">
+		<img src="img/mairie.png" class="nomobile">
+		<h2 class="subtitle">Mairie</h2>
+		<p>Nous nous marierons le vendredi 25 juin 2021 à 15h00 à la mairie du 15ème arrondissement<br>31 rue Peclet, Paris 15.</p>
+	</div>
+	
+	<div class="info right">
+		<img src="img/ceremonie.png" class="nomobile">
+		<h2 class="subtitle">Cérémonie religieuse</h2>
+		<p>La cérémonie religieuse se déroulera le vendredi 25 juin à 16h30 en l'église Saint Jean-Baptiste de Grenelle.</p>
+	</div>
+	
+	<div class="info left">
+		<img src="img/vindhonneur.png" class="nomobile">
+		<h2 class="subtitle">Vin d'honneur</h2>
+		<p>Dès 18h00, ambiance plus détendue autour d'une flûte de champagne et d'une pièce-montée aux salons xxxxxxxx !</p>
+	</div>
+		
+
+</section>
+
+<section>
+	
+	<h1>Notre liste de mariage</h1>
+	<p>Chers amis, après 3 ans de vie commune, nous n'avons plus vraiment besoin de vaisselle ! Notre plus grand plaisir serait de partir en Lune de Miel en Asie en pensant à vous 😊</p>
+    <p>Si vous souhaitez nous faire un cadeau, vous trouverez ci-dessous quelques éléments de notre voyage de noces que vous pouvez nous offrir.</p>
+    <p>Un grand merci 😍</p>
+
+    <div id="list-container">
+    	
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">10 €</div>
+    		<img src="img/list/creme.jpg" />
+    		<div class="list-text">
+    			<h1>Une bonne crème solaire pour Guillaume</h1>
+    			Sshhhh il vient du Nord... 🤫
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">20 €</div>
+    		<img src="img/list/cocktails.jpg" />
+    		<div class="list-text">
+    			<h1>Deux cocktails à partager au bord de la piscine</h1>
+    			En pensant à vous
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">30 €</div>
+    		<img src="img/list/biafine.jpg" />
+    		<div class="list-text">
+    			<h1>Deux tubes de Biafine </h1>
+    			Pour quand Guillaume oubliera de mettre de la crème solaire
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">40 €</div>
+    		<img src="img/list/guide.jpg" />
+    		<div class="list-text">
+    			<h1>Le guide des meilleurs trails de Thaïlande</h1>
+    			Quand va-t-il s'arrêter...?  🙄
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">50 €</div>
+    		<img src="img/list/maillot.jpg" />
+    		<div class="list-text">
+    			<h1>Un nouveau maillot de bain pour Diane</h1>
+    			c'est à dire le 42ème
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">80 €</div>
+    		<img src="img/list/plongee.jpg" />
+    		<div class="list-text">
+    			<h1>Une sortie de plongée</h1>
+    			Dans un des plus beau spot du monde
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">100 €</div>
+    		<img src="img/list/dinerromantique.jpg" />
+    		<div class="list-text">
+    			<h1>Un dîner romantique seuls sur la plage</h1>
+    			Avec les bougies dans le sable et tout le tralala
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">120 €</div>
+    		<img src="img/list/avion.jpg" />
+    		<div class="list-text">
+    			<h1>1000 km en avion pour partir au bout du monde</h1>
+    			Et peut être revenir
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">150 €</div>
+    		<img src="img/list/hotel.jpg" />
+    		<div class="list-text">
+    			<h1>Une nuit dans un hôtel de rêve</h1>
+    			Avec piscine privée 😍
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">200 € </div>
+    		<img src="img/list/ile.jpg" />
+    		<div class="list-text">
+    			<h1>Deux jours sur une île déserte</h1>
+    			Pas trop déserte quand même sinon Diane aura faim
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix">350 €</div>
+    		<img src="img/list/angkor.jpg" />
+    		<div class="list-text">
+    			<h1>Un détour par le Cambodge</h1>
+    			Pour voir les temples d'Angkor
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayCustom(this);">Offrir</span></div>
+    		<div class="prix">montant libre</div>
+    		<img src="img/list/surprise.jpg" />
+    		<div class="list-text">
+    			<h1>Quelque chose de particulier que vous aimeriez nous offrir ?</h1>
+    		</div>
+    	</div></div>
+
+    </div>
 
 </section>
 
 
 <footer>
-	Fait avec <i class="fas fa-heart"></i> par <a href="mailto:parisot.simon@gmail.com">Simon</a> pour Diane et Guillaume<br>
+	Fait avec ♥ par <a href="mailto:parisot.simon@gmail.com">Simon</a> pour Diane et Guillaume<br>
 </footer>
 
+<!-- Custom scripts for payment -->
+<script src="payment-modals.js"></script>
+
 </body>
+
 </html>
