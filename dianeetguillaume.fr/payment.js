@@ -1,12 +1,43 @@
-// display payment Stripe payment page whenever an "Offrir" button is clicked
-function displayPayment(button) {
-  console.log("You clicked:", button.innerHTML);
-  // body...
+/* ------ ------ ------ ------ ------ ------
+Handle payment and purchase record in database 
+------ ------ ------ ------ ------ ------ */
+
+// Prepare Stripe Checkout payment object
+// We use a private stripe key for payment. Here, my Stripe account is used (Simon Parisot).
+var handler = StripeCheckout.configure({
+  key: 'pk_test_hbwOKb2RetfdKpJR28GzEWO7',
+  image: 'img/profile.png',
+  locale: 'fr',
+  token: function(token) {
+    processPayment(token);
+  }
+});
+
+
+
+// If browser is too old to support fetch API
+if (!window.fetch) {
+    // to do..
 }
 
 
 
-// display a custom modal for custom gift before proceeding to payment
+// Display payment modal with associated price and item description
+// Triggered when user click on "Offrir" buttons
+function displayPayment(button) {
+  handler.open({
+    name: "Liste de mariage D&G",
+    description: button.querySelector('.list-text h1').textContent,
+    currency: 'eur',
+    amount: 100*(button.querySelector('.prix span').textContent),
+    allowRememberMe: false,
+  });
+}
+
+
+
+// Display a custom modal for custom gift before proceeding to payment
+// Triggered when user click on the custom gift
 function displayCustom(button) {
   console.log("You clicked:", button.innerHTML);
   var customModal = document.querySelectorAll('#custom-gift');
@@ -16,7 +47,8 @@ function displayCustom(button) {
 
 
 
-// add transaction details in DB
+// Record transaction details in DB
+// Triggered when a transaction is done
 function recordTransaction(token, ) {
   var httpRequest = new XMLHttpRequest();
   
@@ -47,16 +79,17 @@ function recordTransaction(token, ) {
 }
 
 
-/*
-// Payment processing using Stripe Checkout via Ajax and Lambda
+
+// Payment processing
+// Triggered when user has provided its payment information and wants to checkout
 function processPayment(token) {
 
-  // display loading animation ...
-  var elem = document.getElementById("loader");
-  elem.style.display = "block";
+  // display loader ? to do..
   
-    var httpRequest = new XMLHttpRequest();
+  var httpRequest = new XMLHttpRequest();
     
+  console.log(token);
+
   var data = {
     "token": token.id, 
     "email": token.email,
@@ -95,54 +128,3 @@ function processPayment(token) {
   httpRequest.setRequestHeader('Content-Type', 'application/json');
   httpRequest.send(JSON.stringify(data));
 }
-
-
-
-// handle Stripe Checkout payment object
-var handler = StripeCheckout.configure({
-  key: 'pk_live_a1RE9seMvw4wYUEs9SiGLl5h',
-  image: 'img/profile.png',
-  locale: 'fr',
-  token: function(token) {
-    processPayment(token);
-  }
-});
-
-var els = document.getElementsByClassName('paybutton');
-Array.prototype.forEach.call(els, function(el) {
-  el.addEventListener('click', function(e) {
-
-    // setting global variables
-    window.price = 100*$(this).attr('relprice');
-    window.item = $(this).attr('reldesc');
-
-    // For some browsers, `attr` is undefined; for others,
-    // `attr` is false.  Check for both.
-    if (typeof window.item !== typeof undefined && window.item !== false && window.item !== "" && window.item !== 0) {
-    }else{
-      window.price = 100*$('#customAmount').val();
-      window.item = $('#customIdea').val();
-    }
-
-    if (window.price == 0 || window.item == "") {
-      $('.errorMsg').html('Certains champs sont vides');
-    }else{
-      // display checkout popup
-      $('.cmodal-container').hide();
-      handler.open({
-        name: "Liste de mariage A&S",
-        description: window.item,
-        currency: 'eur',
-        amount: window.price,
-        allowRememberMe: false,
-      });
-    }
-    e.preventDefault();
-  });
-});
-
-window.addEventListener('popstate', function() {
-  handler.close();
-});
-
-*/

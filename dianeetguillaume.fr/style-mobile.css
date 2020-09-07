@@ -9,9 +9,19 @@
 	section h2 { font-size: 1.4rem; margin-top: 2rem; }
 	section h3 { font-size: 2rem; }
 
-	section:nth-of-type(1) { padding: 1rem; }
+	section:nth-of-type(1) { padding: 0; }
 
-	.savethedate { width: 100%; height: auto; bottom: 0; }
+	/*section:nth-of-type(1):before {
+		background: url("img/bg.jpg") no-repeat center center fixed;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	    height: 100%;
+	    overflow: hidden;
+	}  */  
+
+	.savethedate { width: 100%; height: auto; bottom: 14%; }
 	img#title, img#subtitle { width: 100%; }
 
 	section:nth-of-type(2) > h1 { margin-bottom: 2rem; }

@@ -12,6 +12,10 @@
 	<link rel="stylesheet" type="text/css" href="style.css?v2.0.3">
 	<link rel="stylesheet" type="text/css" href="style-mobile.css?v2.0.3">
 
+    <!-- payment scripts -->
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="payment.js"></script>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129355826-1"></script>
 	<script>
@@ -69,9 +73,9 @@
 
     <div id="list-container">
     	
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">10 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>10</span> €</div>
     		<img src="img/list/creme.jpg" />
     		<div class="list-text">
     			<h1>Une bonne crème solaire pour Guillaume</h1>
@@ -79,9 +83,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">20 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>20</span> €</div>
     		<img src="img/list/cocktails.jpg" />
     		<div class="list-text">
     			<h1>Deux cocktails à partager au bord de la piscine</h1>
@@ -89,9 +93,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">30 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>30</span> €</div>
     		<img src="img/list/biafine.jpg" />
     		<div class="list-text">
     			<h1>Deux tubes de Biafine </h1>
@@ -99,9 +103,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">40 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>40</span> €</div>
     		<img src="img/list/guide.jpg" />
     		<div class="list-text">
     			<h1>Le guide des meilleurs trails de Thaïlande</h1>
@@ -109,9 +113,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">50 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>50</span> €</div>
     		<img src="img/list/maillot.jpg" />
     		<div class="list-text">
     			<h1>Un nouveau maillot de bain pour Diane</h1>
@@ -119,9 +123,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">80 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>80</span> €</div>
     		<img src="img/list/plongee.jpg" />
     		<div class="list-text">
     			<h1>Une sortie de plongée</h1>
@@ -129,9 +133,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">100 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>100</span> €</div>
     		<img src="img/list/dinerromantique.jpg" />
     		<div class="list-text">
     			<h1>Un dîner romantique seuls sur la plage</h1>
@@ -139,9 +143,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">120 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>120</span> €</div>
     		<img src="img/list/avion.jpg" />
     		<div class="list-text">
     			<h1>1000 km en avion pour partir au bout du monde</h1>
@@ -149,9 +153,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">150 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>150</span> €</div>
     		<img src="img/list/hotel.jpg" />
     		<div class="list-text">
     			<h1>Une nuit dans un hôtel de rêve</h1>
@@ -159,9 +163,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">200 € </div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>200</span> € </div>
     		<img src="img/list/ile.jpg" />
     		<div class="list-text">
     			<h1>Deux jours sur une île déserte</h1>
@@ -169,9 +173,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix">350 €</div>
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>350</span> €</div>
     		<img src="img/list/angkor.jpg" />
     		<div class="list-text">
     			<h1>Un détour par le Cambodge</h1>
@@ -179,9 +183,9 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayCustom(this);">Offrir</span></div>
-    		<div class="prix">montant libre</div>
+    	<div class="list-item"><div class="box" onClick="displayCustom(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix"><span>montant</span> libre</div>
     		<img src="img/list/surprise.jpg" />
     		<div class="list-text">
     			<h1>Quelque chose de particulier que vous aimeriez nous offrir ?</h1>
@@ -196,9 +200,6 @@
 <footer>
 	Fait avec ♥ par <a href="mailto:parisot.simon@gmail.com">Simon</a> pour Diane et Guillaume<br>
 </footer>
-
-<!-- Custom scripts for payment -->
-<script src="payment-modals.js"></script>
 
 </body>
 
