@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
+
+	<title>Liste de Naissance de Myrtille</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="stylesheet" type="text/css" href="style.css?v2.0.3">
+	<link rel="stylesheet" type="text/css" href="style-mobile.css?v2.0.3">
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script type="text/javascript">
+        var stripe = Stripe('pk_live_a1RE9seMvw4wYUEs9SiGLl5h');
+        function displayPayment(button) {
+            
+            // create a Stripe Checkout session when clicking on "Offrir" button
+            let price_id = button.querySelector('.prix').getAttribute("rel");
+            let body = { priceid: price_id };
+            fetch('https://mkyxg4hpmk.execute-api.eu-west-1.amazonaws.com/create-checkout-session', { 
+                method: "POST",
+                body: JSON.stringify(body)
+            })
+            .then(function(response) { return response.json(); })
+            .then(function(session) { return stripe.redirectToCheckout({ sessionId: session.id }); })
+            .then(function(result) {
+                // if `redirectToCheckout` fails due to a browser or network error
+                if (result.error) alert(result.error.message)
+            })
+            .catch(function(error) { console.error('Error:', error); });
+        }
+    </script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129355826-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-129355826-1');
+	</script>
+
+</head>
+<body>
+
+<section>
+	
+	<div class="savethedate">
+		<img id="title" src="img/title.png">
+		<img id="subtitle" src="img/subtitle.png">
+	</div>
+
+</section>
+
+<section id="liste">
+	
+	<h1>Liste de Naissance</h1>
+	<p>La petite Myrtille arrive ! (c'est un nom de code bien entendu 😊)</p>
+    <p>"Pour préparer mon arrivée, mes parents ont encorequelques achats importants à faire. Si vous souhaitez me faire un cadeau, vous trouverez ci-dessous quelques éléments que vous pouvez m'offrir.</p>
+    <p>Un grand merci 😍"</p>
+
+    <div id="list-container">
+    	
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix" rel="price_1Ka2HrESd2YLxnCl0y5H3DHH">20 €</div>
+    		<img src="img/list/eveil.jpg" />
+    		<div class="list-text">
+    			<h1>Des jeux d'éveil ...</h1>
+    			pour que je découvre les couleurs, les textures, les sons et les formes.
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix" rel="price_1Ka0yyESd2YLxnClDA81O0VX">40 €</div>
+    		<img src="img/list/peluche.jpg" />
+    		<div class="list-text">
+    			<h1>Une adorable peluche baleine,</h1>
+    			mon doudou, fabriquée à partir de cotons et fausses fourrures recyclés.
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix" rel="price_1Ka0wCESd2YLxnClVZoqAOaq">50 €</div>
+    		<img src="img/list/hibou.jpg" />
+    		<div class="list-text">
+    			<h1>Un baby phone hibou ...</h1>
+    			pratique ET adorable, pour que maman et papa entendent mes vocalises !
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix" rel="price_1Ka15RESd2YLxnClgEWyYkHb">75 €</div>
+    		<img src="img/list/sac.jpg" />
+    		<div class="list-text">
+    			<h1>Un sac à langer ...</h1>
+    			pour partir facilement en vadrouille avec moi.
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix" rel="price_1Ka19PESd2YLxnClAR9rH3ky">100 €</div>
+    		<img src="img/list/biberon.jpg" />
+    		<div class="list-text">
+    			<h1>Un kit de biberons ...</h1>
+    			pour que papa aussi puisse me donner à manger.
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix" rel="price_1Ka2EtESd2YLxnClEcyWDzMS">150 €</div>
+    		<img src="img/list/lampe.jpg" />
+    		<div class="list-text">
+    			<h1>Une jolie lampe montgolfière ...</h1>
+    			pour décorer ma chambre et me donner des envies d'exotisme.
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix" rel="price_1Ka1FxESd2YLxnClVM2Xj88U">500 €</div>
+    		<img src="img/list/poussette.jpg" />
+    		<div class="list-text">
+    			<h1>Une poussette pliable, convertible et tout terrain ...</h1>
+    			pour explorer le monde dès mon plus jeune âge.
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix" rel="price_1Ka1J9ESd2YLxnClHeke7E4G">700 €</div>
+    		<img src="img/list/lit.jpg" />
+    		<div class="list-text">
+    			<h1>Un lit évolutif berceau / lit à barreau / lit comme pour les grands ...</h1>
+    			pour me reposer de toutes ces aventures.
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box" onClick="displayCustom(this);">
+    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    		<div class="prix" rel="">montant libre</div>
+    		<img src="img/list/surprise.jpg" />
+    		<div class="list-text">
+    			<h1>Quelque chose de particulier que vous aimeriez m'offrir ?</h1>
+    		</div>
+    	</div></div>
+
+    </div>
+
+</section>
+
+
+<footer>
+	Fait avec ♥ par <a href="mailto:parisot.simon@gmail.com">Audrey & Simon</a> pour la petite Myrtille<br>
+</footer>
+
+</body>
+
+</html>
