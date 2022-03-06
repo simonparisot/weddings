@@ -36,7 +36,8 @@ exports.handler = async (event, context, callback) => {
 	    console.log('Item stored. Returning ...');
 	    //console.log('DEBUG: Charge:', JSON.stringify(charge));
 	    callback(null, {
-	        statusCode: 200,
+	        statusCode: 201,
+	        body: JSON.stringify({ id: token }),
 	        headers: { 'Access-Control-Allow-Origin': '*' }
 	    });
 	    

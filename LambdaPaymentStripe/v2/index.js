@@ -17,8 +17,8 @@ exports.handler = async (event) => {
 			{price: priceid, quantity: 1},
 		],
 		mode: "payment",
-		success_url: "https://dianeetguillaume.fr/merci.html",
-		cancel_url: "https://dianeetguillaume.fr#liste",
+		success_url: "https://audreyetsimon.fr/naissance/merci.html",
+		cancel_url: "https://audreyetsimon.fr/naissance/",
 	});
 
 	let responseBody = { id: session.id };
