@@ -18,8 +18,16 @@
         function displayPayment(button) {
             
             // create a Stripe Checkout session when clicking on "Offrir" button
-            let price_id = button.querySelector('.prix').getAttribute("rel");
-            let body = { priceid: price_id };
+            var price_id = button.parentElement.parentElement.querySelector('.prix').getAttribute("rel");
+            if (price_id == "") {
+                var customprice = button.parentElement.parentElement.querySelector('#custom_price').value*100;
+                var customtext = button.parentElement.parentElement.querySelector('#custom_text').value;
+                var body = { custom_price: customprice, custom_text: customtext };
+            }else{
+                var body = { priceid: price_id };
+            }
+            console.log(body);
+
             fetch('https://mkyxg4hpmk.execute-api.eu-west-1.amazonaws.com/create-checkout-session', { 
                 method: "POST",
                 body: JSON.stringify(body)
@@ -57,6 +65,48 @@
 </section>
 
 
+<section id="photos">
+
+	<h1 class="title">Les photos</h1>
+	
+    <p>Voici l'oeuvre de notre photographe, Aymen Mahfoudh (<a href="https://wandermoons.com/">son site</a>) ainsi que le stand photo.</p>
+
+    <div class="gallery">
+			
+			<a href="https://photos.app.goo.gl/UeNHf3aNTs5LMhZZA"><div class="gallery-item">
+				<div id="mairie" class="gallery-img"></div>
+				<div class="gallery-txt"><h1>Mairie</h1>140 photos</div>
+			</div></a>
+
+			<a href="https://photos.app.goo.gl/Tg3dTc23yg6gcTFS8"><div class="gallery-item">
+				<div id="prepa" class="gallery-img"></div>
+				<div class="gallery-txt"><h1>Préparation</h1>138 photos</div>
+			</div></a>
+
+			<a href="https://photos.app.goo.gl/fVKz8LpussFbZunu8"><div class="gallery-item">
+				<div id="eglise" class="gallery-img"></div>
+				<div class="gallery-txt"><h1>Église</h1>200 photos</div>
+			</div></a>
+
+			<a href="https://photos.app.goo.gl/V5maQRncnj3Zy1jB7"><div class="gallery-item">
+				<div id="vin" class="gallery-img"></div>
+				<div class="gallery-txt"><h1>Vin d'honneur</h1>115 photos</div>
+			</div></a>
+
+			<a href="https://photos.app.goo.gl/1qXmkJpHSEHGdSnj8"><div class="gallery-item">
+				<div id="maries" class="gallery-img"></div>
+				<div class="gallery-txt"><h1>Les mariés</h1>58 photos</div>
+			</div></a>
+
+			<a href="https://photos.app.goo.gl/p9TSXVmaJ2W1yTra8"><div class="gallery-item">
+				<div id="stand" class="gallery-img"></div>
+				<div class="gallery-txt"><h1>Stand photo</h1>79 photos</div>
+			</div></a>
+		
+		</div>
+
+</section>
+
 <section id="programme">
 
 	<h1 class="title">Quel est le programme ?</h1>
@@ -64,45 +114,46 @@
 	<div class="info left">
 		<img src="img/mairie.png" class="nomobile">
 		<h2 class="subtitle">Mairie</h2>
-		<p>Nous nous marierons le vendredi 25 juin 2021 à 15h00 à la mairie du 15ème arrondissement<br>31 rue Peclet, Paris 15.</p>
+		<p>Nous nous marierons le vendredi 25 juin 2021 à 10h30 à la mairie du 15ème arrondissement,<br>31 rue Peclet, Paris 15ème</p>
 	</div>
 	
 	<div class="info right">
 		<img src="img/ceremonie.png" class="nomobile">
 		<h2 class="subtitle">Cérémonie religieuse</h2>
-		<p>La cérémonie religieuse se déroulera le vendredi 25 juin à 16h30 en l'église Saint Jean-Baptiste de Grenelle.</p>
+		<p>La cérémonie religieuse se déroulera à 14h30 <br>à l'église Saint-François-Xavier, <br>12 Place du Président Mithouard, Paris 7ème</p>
 	</div>
 	
 	<div class="info left">
-		<img src="img/vindhonneur.png" class="nomobile">
+		<img src="img/champagne2.png" class="nomobile">
 		<h2 class="subtitle">Vin d'honneur</h2>
-		<p>Dès 18h00, ambiance plus détendue autour d'une flûte de champagne et d'une pièce-montée aux salons xxxxxxxx !</p>
+		<p>Dès 16h00, ambiance plus détendue autour d'une flûte de champagne et d'une pièce-montée au 6 rue de Belgrade,<br>Paris 7ème</p>
 	</div>
-		
 
+    <img class="plan box" src="img/plan.jpg">
+    <p>Les différents lieux de la journée sont proches les uns des autres, il est tout à fait possible de ne se déplacer qu’à pied.</p>
 </section>
 
 <section id="liste">
 	
 	<h1>Notre liste de mariage</h1>
-	<p>Chers amis, après 3 ans de vie commune, nous n'avons plus vraiment besoin de vaisselle ! Notre plus grand plaisir serait de partir en Lune de Miel en Asie en pensant à vous 😊</p>
+	<p>Chers amis, après 3 ans de vie commune, nous n'avons plus vraiment besoin de vaisselle ! Notre plus grand plaisir serait de partir en Lune de Miel en Thaïlande en pensant à vous 😊</p>
     <p>Si vous souhaitez nous faire un cadeau, vous trouverez ci-dessous quelques éléments de notre voyage de noces que vous pouvez nous offrir.</p>
     <p>Un grand merci 😍</p>
 
     <div id="list-container">
-    	
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
-    		<div class="prix" rel="price_1HOsmMESd2YLxnCl6blSSesV">10 €</div>
-    		<img src="img/list/creme.jpg" />
-    		<div class="list-text">
-    			<h1>Une bonne crème solaire pour Guillaume</h1>
-    			Sshhhh il vient du Nord... 🤫
-    		</div>
-    	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+        <div class="list-item"><div class="box">
+            <div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+            <div class="prix" rel="price_1HOsmMESd2YLxnCl6blSSesV">10 €</div>
+            <img src="img/list/creme.jpg" />
+            <div class="list-text">
+                <h1>Une bonne crème solaire pour Guillaume</h1>
+                Sshhhh il vient du Nord... 🤫
+            </div>
+        </div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOsmpESd2YLxnClHAXVHMC0">20 €</div>
     		<img src="img/list/cocktails.jpg" />
     		<div class="list-text">
@@ -111,8 +162,8 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOsnKESd2YLxnClngFn9eoG">30 €</div>
     		<img src="img/list/biafine.jpg" />
     		<div class="list-text">
@@ -121,8 +172,8 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOso4ESd2YLxnCl9kwiEtLV">40 €</div>
     		<img src="img/list/guide.jpg" />
     		<div class="list-text">
@@ -131,8 +182,8 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOsoXESd2YLxnClbRkEULbK">50 €</div>
     		<img src="img/list/maillot.jpg" />
     		<div class="list-text">
@@ -141,8 +192,8 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOsp0ESd2YLxnCl43Fl3A8c">80 €</div>
     		<img src="img/list/plongee.jpg" />
     		<div class="list-text">
@@ -151,8 +202,8 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOspdESd2YLxnClIxZF59au">100 €</div>
     		<img src="img/list/dinerromantique.jpg" />
     		<div class="list-text">
@@ -161,8 +212,8 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOspwESd2YLxnCl679BSML7">120 €</div>
     		<img src="img/list/avion.jpg" />
     		<div class="list-text">
@@ -171,8 +222,8 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOsqLESd2YLxnClGreY2fov">150 €</div>
     		<img src="img/list/hotel.jpg" />
     		<div class="list-text">
@@ -181,8 +232,8 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOsqgESd2YLxnClgsfnR575">200 € </div>
     		<img src="img/list/ile.jpg" />
     		<div class="list-text">
@@ -191,8 +242,8 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayPayment(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
     		<div class="prix" rel="price_1HOsr7ESd2YLxnClIQdiscQm">350 €</div>
     		<img src="img/list/angkor.jpg" />
     		<div class="list-text">
@@ -201,9 +252,13 @@
     		</div>
     	</div></div>
 
-    	<div class="list-item"><div class="box" onClick="displayCustom(this);">
-    		<div class="offrir"><span class="btnLg">Offrir</span></div>
-    		<div class="prix" rel="">montant libre</div>
+    	<div class="list-item"><div class="box">
+    		<div class="offrir custom">
+                <input id="custom_price" type="number" placeholder="montant (en €)" />
+                <input id="custom_text" type="text" placeholder="Un petit message ?" />
+                <div class="btnLg" onClick="displayPayment(this);">Offrir</div>
+            </div>
+    		<div class="prix" rel="">Montant libre</div>
     		<img src="img/list/surprise.jpg" />
     		<div class="list-text">
     			<h1>Quelque chose de particulier que vous aimeriez nous offrir ?</h1>

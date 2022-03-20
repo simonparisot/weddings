@@ -67,7 +67,7 @@ section:nth-of-type(1):before {
 	width: 100%;
 	height: 100%;
 	z-index: -10;
-	background: #E1B454 url("img/bg.jpg") center/cover no-repeat;
+	background: #E1B454 url("img/dillaume&guiane.jpg") center/cover no-repeat;
 }
 
 .savethedate { position: absolute; height: 100%; }
@@ -75,12 +75,10 @@ section:nth-of-type(1):before {
 img#title { width: 30%; }
 img#subtitle { width: 25%; }
 
-
-
 /* -------------------------------------------------- */
 
 section:nth-of-type(2) {
-	background: repeat url(img/pattern3.png);
+	background: repeat url(img/bg3.png);
     padding-bottom: 50px;
     padding-top: 50px;
     border: 1px solid #666;
@@ -89,74 +87,10 @@ section:nth-of-type(2) {
 
 section:nth-of-type(2) > h1 { margin-bottom: 4rem; }
 
-.gallery a { text-decoration: none; }
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.gallery-item {
-    width: fit-content;
-    margin-right: 1.6rem;
-    margin-bottom: 1.6rem;
-}
-
-.gallery-img {
-    width: 14rem;
-    height: 14rem;
-    background: center / cover no-repeat;
-    border-radius: 10px;
-}
-
-.gallery-img#mairie {
-    background-image: url(img/mairie-thb.png);
-}
-.gallery-img#prepa {
-    background-image: url(img/prepa.png);
-}
-.gallery-img#eglise {
-    background-image: url(img/eglise.png);
-}
-.gallery-img#maries {
-    background-image: url(img/maries.png);
-}
-.gallery-img#vin {
-    background-image: url(img/vin.png);
-}
-.gallery-img#stand {
-    background-image: url(img/stand.png);
-}
-
-.gallery-txt {
-    font-size: 1rem;
-    color: #222;
-}
-
-.gallery-txt h1 {
-    font-size: 1.2rem;
-    color: #000;
-    margin: 10px 0 5px 0;
-}
-
-/* -------------------------------------------------- */
-
-section:nth-of-type(3) {
-  background: repeat url(img/bg3.png);
-    padding-bottom: 50px;
-    padding-top: 50px;
-    border: 1px solid #666;
-    box-shadow: 2px 2px 10px #000;
-}
-
-section:nth-of-type(3) > h1 { margin-bottom: 4rem; }
-
 .info.right { padding-left:  60%; text-align: right; }
 .info.right img { height: 60px; float: right; margin-right: -85px; }
 .info.left { padding-right: 60%; text-align: left; }
 .info.left img { height: 60px; float: left; margin-left: -85px; }
-
-.info.left span { font-weight: bold; color: red; }
 
 .plan {
   width: 100%;
@@ -165,9 +99,9 @@ section:nth-of-type(3) > h1 { margin-bottom: 4rem; }
 
 /* -------------------------------------------------- */
 
-/*section:nth-of-type(4) { background: darkgrey url("img/beach.jpg") no-repeat center/cover; color: #fff; }
-section:nth-of-type(4) h1 { text-shadow: 1px 1px 2px #222; }*/
-section:nth-of-type(4) { background: #E1B454; }
+/*section:nth-of-type(3) { background: darkgrey url("img/beach.jpg") no-repeat center/cover; color: #fff; }
+section:nth-of-type(3) h1 { text-shadow: 1px 1px 2px #222; }*/
+section:nth-of-type(3) { background: #E1B454; }
 
 #list-container { 
 	display: inline-flex;
