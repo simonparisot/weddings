@@ -20,6 +20,24 @@ exports.handler =  (event, context, callback) => {
         console.log("No header");
         callback(null, redirect('/fr/'));
       }
+    } else if(request.uri == '/civil.html'){
+      if (typeof headers['accept-language'] !== 'undefined') {
+        const supportedLanguages = headers['accept-language'][0].value;
+        console.log('Supported languages:', supportedLanguages);
+        if(supportedLanguages.startsWith('fr')){
+          console.log("french detected");
+          callback(null, redirect('/fr/civil.html'));
+        } else if(supportedLanguages.startsWith('it')){
+          console.log("Italian detected");
+          callback(null, redirect('/it/civil.html'));
+        } else {
+          console.log("no language suited. fr it is");
+          callback(null, redirect('/fr/civil.html')) ;
+        }
+      } else {
+        console.log("No header");
+        callback(null, redirect('/fr/civil.html'));
+      }
     } else {
       callback(null, request);
     }
