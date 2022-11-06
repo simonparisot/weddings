@@ -1,0 +1,14 @@
+{
+  "name": "create_stripeconnect_checkout_session",
+  "version": "3.0.0",
+  "description": "Create Stripe Connect Checkout payment session",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "parisot.simon@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "stripe": "^9.11.0"
+  }
+}
