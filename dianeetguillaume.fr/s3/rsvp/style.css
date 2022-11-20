@@ -1,0 +1,310 @@
+@font-face {
+	font-family: 'Athletics';
+	src: url('fonts/athletics-regular.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Athletics';
+	src: url('fonts/athletics-bold.otf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Stray Bullets';
+	src: url('fonts/straybullets-smooth.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* GENERIC STYLE
+-------------------------------------------------- */
+
+body { background-color: #000; margin: 0; padding: 0; }
+a { text-decoration: underline; color: inherit;  }
+p { margin-top: 0.2rem; }
+
+section {
+	position: relative;
+	z-index: 2;
+	font: 1.6rem "Athletics", sans-serif;
+	padding: 80px 20%;
+
+}
+
+section > h1 { font: 4.6rem "Stray Bullets", cursive, sans-serif; margin: 0 0 20px 0; }
+section h2 { font: 1.6rem "Athletics", sans-serif; font-weight: bold; margin: 0.6rem 0 0 0; }
+
+.btnLg { 
+	padding: 15px 30px;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    background-color: #E1B454;
+    font: 1.6rem "Athletics", sans-serif;
+    border: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+}
+
+/* SECTIONS
+-------------------------------------------------- */
+
+section:nth-of-type(1) { 
+	height: 100vh;
+	padding: 4rem;
+	box-sizing: border-box;
+}
+
+section:nth-of-type(1):before {
+	content: "";
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+	background: #E1B454 url("img/dillaume&guiane.jpg") center/cover no-repeat;
+}
+
+.savethedate { position: absolute; height: 100%; }
+.savethedate img { display: block; }
+img#title { width: 30%; }
+img#subtitle { width: 25%; }
+
+/* -------------------------------------------------- */
+
+section:nth-of-type(2) {
+	background: repeat url(img/bg3.png);
+    padding-bottom: 50px;
+    padding-top: 50px;
+    border: 1px solid #666;
+    box-shadow: 2px 2px 10px #000;
+}
+
+section:nth-of-type(2) > h1 { margin-bottom: 4rem; }
+
+.info.right { padding-left:  60%; text-align: right; }
+.info.right img { height: 60px; float: right; margin-right: -85px; }
+.info.left { padding-right: 60%; text-align: left; }
+.info.left img { height: 60px; float: left; margin-left: -85px; }
+
+.plan {
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* -------------------------------------------------- */
+
+/*section:nth-of-type(3) { background: darkgrey url("img/beach.jpg") no-repeat center/cover; color: #fff; }
+section:nth-of-type(3) h1 { text-shadow: 1px 1px 2px #222; }*/
+section:nth-of-type(3) { background: #E1B454; }
+
+#list-container { 
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+.list-item {
+	flex: 0 0 33.33%;
+	overflow: hidden;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.box { 
+	background: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.3);
+    overflow: hidden;
+    position: relative;
+}
+.box img { 
+	width: 100%; 
+	display: block;
+}
+.list-text { 
+	color: #555;
+	padding: 10px;
+	font-size: 1rem;
+}
+.list-text h1 { 
+	color: #000; 
+	margin: 0; 
+	padding: 0; 
+	font-size: 1.2rem;
+}
+.prix {
+	position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1rem;
+  padding: 2px 10px;
+  background: rgba(255,255,255,.8);
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 1;
+}
+.offrir { 
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(255,255,255,.5);
+	padding-top: 100px;
+	z-index: 2;
+}
+.box:hover .offrir { display: block; }
+
+.custom { padding: 50px 20px; background: rgba(255,255,255,.9); }
+.custom input {
+  display: block;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: left;
+  border-radius: 6px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 220px;
+}
+.custom .btnLg { width: 220px; padding: 10px; font-size: 1.2rem; }
+.custom #custom_price {}
+.custom #custom_text {}
+
+/* -------------------------------------------------- */
+
+footer {
+	position: relative;
+	background-color: #1a252f;
+	color: #fff;
+	text-align: center;
+	padding-top: 20px; padding-bottom: 20px;
+	font: 0.8rem "Athletics", sans-serif;
+	z-index: 2;
+}
+
+footer .fas { margin: 0 5px; }
+
+
+/* modals -------------------------------------------- */
+/* Custom modal css */
+.cmodal-container { 
+  display: none;
+  position: fixed;
+  text-align: center;
+  padding-top: 10%;
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  background-color: rgba(0,0,0,.6);
+}
+.cmodal { 
+  width: 300px;
+  background-color: #f5f5f7;
+  display: inline-block;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px 0 rgba(0,0,0,.5), inset 0 1px 0 0 hsla(0,0%,100%,.65);
+}
+.cmodal header {
+  background-color: #e8e9eb;
+  height: 120px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 12px 36px;
+  text-align: center;
+  position: relative;
+}
+.cm-logo-wrapper-container { position: relative; margin-bottom: 6px; height: 35px; }
+.cm-logo-wrapper { 
+  position: absolute;
+  top: -38px;
+  right: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+}
+.cm-logo-border {
+  border: 3px solid #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.18), 0 2px 2px 0 rgba(0,0,0,.08);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cm-logo { 
+  background-image: url("../img/profile.png");
+  width: 64px;
+  height: 64px;
+  margin: 3px;
+  border-radius: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+}
+.cmodal header h1 { 
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.5;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.cmodal header h2 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #5b5b65;
+  text-shadow: 0 1px 0 #fff;
+  padding-bottom: 6px;
+  line-height: 1.5;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.cmodal form { padding: 36px; }
+.cmodal form input, textarea {
+  padding: 9px;
+  font-size: 15px;
+  color: #000;
+  border-radius: 4px;
+  line-height: normal!important;
+  background: #fff;
+  width: 100%;
+  border: 1px solid hsla(240,1%,49%,.25);
+  box-shadow: inset 0 1px 1px 0 hsla(240,1%,49%,.3), 0 1px 0 0 hsla(0,0%,100%,.7);
+}
+.cmodal-close {
+  background-image: url("../img/close.png");
+  background-size: 17px;
+  width: 25px;
+  height: 25px;
+  background-position: 4px 4px;
+  right: 6px;
+  top: 6px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+  transition-property: opacity;
+}
+.cmodal button {
+  position: relative;
+  border-radius: 4px;
+  background-color: #3ea8e5;
+  background-image: linear-gradient(-180deg,#44b1e8,#3098de);
+  box-shadow: 0 1px 0 0 rgba(46,86,153,.15), inset 0 1px 0 0 rgba(46,86,153,.1), inset 0 -1px 0 0 rgba(46,86,153,.4);
+  font-size: 17px;
+  line-height: 21px;
+  height: 37px;
+  font-weight: 700;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.12);
+  color: #fff;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  margin-top: 36px;
+  width: 100%;
+}
+::placeholder { color: #ccc; }
