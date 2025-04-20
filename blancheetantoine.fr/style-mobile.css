@@ -1,0 +1,67 @@
+@media (orientation: portrait), (max-width: 800px) {
+
+	.nomobile { display: none; }
+	.onlymobile { display: initial; }
+
+	section {
+		padding: 60px 10%;
+		font-size: 1.4rem; 
+	}
+
+	section h1 { font-size: 2.4rem; line-height: 1; }
+	section h2 { font-size: 1.4rem; margin-top: 2rem; }
+	section h3 { font-size: 2rem; }
+
+	section#hero {
+		padding: 60px 3%;
+		font-size: 1.4rem; 
+	}
+
+    #title {
+        font-size: 3.6rem;
+    }
+
+    #subtitle {
+        font-size: 1.4rem;
+    }
+
+
+	section#savethedate > h1 { margin-bottom: 2rem; }
+
+	.info.left, .info.right { padding: 0; text-align: left; }
+
+	.list-item { flex: 0 0 100%; padding: 10px 0; }
+
+	footer.section {
+		font-size: 0.8rem;
+		text-align: left;
+	}
+
+    #hero {
+	    background-image: 
+	        linear-gradient(to bottom, black, transparent 30%),
+	        linear-gradient(to top, black, transparent 20%),
+	        url('img/bg2.jpg');
+	}
+}
+
+@media (min-width: 801px) {
+    
+    .nomobile { display: initial; }
+	.onlymobile { display: none; }
+
+    #title {
+        font-size: 5rem;
+    }
+
+    #subtitle {
+        font-size: 2rem;
+    }
+
+    #hero {
+	    background-image: 
+	        linear-gradient(to bottom, black, transparent 30%),
+	        linear-gradient(to top, black, transparent 20%),
+	        url('img/bg4.jpg');
+	}
+}

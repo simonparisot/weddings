@@ -1,20 +1,29 @@
 // Payment handling on the frontend for the Stripe backend.
 
-//var stripe = Stripe('pk_live_a1RE9seMvw4wYUEs9SiGLl5h');
+var stripe_account = "acct_1LGK8j2EVnc8AHFk";
+var stripe = Stripe('pk_live_51LGBvIFydABlduG3Yx6axMVdv4LQ6DQljmkAxQeZPkZuJSVgMeTJoHc4C26BwpjO15ie3lcXDOzhJHwcLL7r7KfB00b7HtQ4y1', {
+//var stripe = Stripe('pk_test_51LGBvIFydABlduG3zSShZpIbNkIUyfJSsbFUEvzwjp7Gp4R4EyAs1w2cYb1vdxlGVbJ36WHjIBF1PhGtKFQWyPwW00KtaMO0be', {
+  stripeAccount: stripe_account,
+});
+
 function displayPayment(button) {
     
     // create a Stripe Checkout session when clicking on "Offrir" button
     var price_id = button.parentElement.parentElement.querySelector('.prix').getAttribute("rel");
+    
+    // TEST PRODUCT ;)
+    //var price_id = "price_1M19ik2EVnc8AHFk2vYt2zfe";
+    
     if (price_id == "") {
         var customprice = button.parentElement.parentElement.querySelector('#custom_price').value*100;
         var customtext = button.parentElement.parentElement.querySelector('#custom_text').value;
-        var body = { custom_price: customprice, custom_text: customtext };
+        var body = { custom_price: customprice, custom_text: customtext, stripeaccount: stripe_account, successUrl: 'merci.html',cancelUrl: '' };
     }else{
-        var body = { priceid: price_id };
+        var body = { priceid: price_id, stripeaccount: stripe_account, successUrl: 'merci.html',cancelUrl: '' };
     }
 
     // sending the payment request to our backend, then to Stripe
-    fetch('https://mkyxg4hpmk.execute-api.eu-west-1.amazonaws.com/create-checkout-session', { 
+    fetch('https://7dgldtlbqkzusaqp5z45py27vi0cpodp.lambda-url.eu-west-1.on.aws/', { 
         method: "POST",
         body: JSON.stringify(body)
     })

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bim Bam Boum</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+	<script type="text/javascript">         
+		$(document).ready(function() {
+			
+			$("#submit").click(function(e) {                 
+				e.preventDefault();                          
+				var name = $("#name").val(), email = $("#email").val(), message = $("#message").val();                          
+				
+				$.ajax({                     
+					type: "POST",                     
+					url: 'https://g7x10l3re5.execute-api.eu-west-1.amazonaws.com/prod',
+					contentType: 'application/json',      
+					data: JSON.stringify({                         
+						'name': name,                         
+						'email': email,                         
+						'message': message                     
+					}),                     
+					success: function(res){                         
+						$('#form-response').html('<div class="alert alert-info" role="alert">Well done, we\'ll keep in touch!</div>');
+					},                     
+					error: function(){
+						$('#form-response').html('<div class="alert alert-info" role="alert">Something went wrong... We are working on it!</div>');                     
+					}
+				});
+			})
+		});      
+	</script>
+
+	<style type="text/css">
+		body{
+			background-color: #111;
+			font-family: 'Playfair Display', serif;
+			color: #eee;
+			font-size: 1.4rem;
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div>
+		Bien joué !<br>
+		<img src="wow.gif" />
+	</div>
+
+	<br>
+
+	<div class="form-label-group"> 
+		<label for="name" class="control-label">Votre nom</label><br>
+		<input type="text" id="name" class="form-control" required> 
+	</div> 
+	
+	<div id="form-response"></div> 
+	
+	<button class="btn btn-lg btn-primary btn-block" id="submit" type="submit" style="background-color:#ddd;">Send</button>
+
+</body>
+</html>
+
+

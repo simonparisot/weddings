@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
-
+<!-- Page en italien -->
 <head>
 
 	<meta charset="UTF-8">
@@ -33,7 +33,7 @@
 	
 	<div class="savethedate">
 		<img id="title" src="../img/title.png">
-		<img id="subtitle" src="../img/subtitle.png">
+		<img id="subtitle" src="../img/subtitle_it_it.png">
 	</div>
 
 </section>
@@ -41,45 +41,51 @@
 
 <section>
 
-	<h1 class="title">vuoi un po' di salsa di pomodoro?</h1>
+	<h1 class="title">Potete venire al nostro matrimonio religioso ?</h1>
 
 	<div class="rsvp q1 currentQuestion">
-		<div class="btnLg btnFixed" onClick="rsvpNext('.q2');">Sì, naturalmente !</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.ko');">No Sfortunatamente</div>
+		<div class="btnLg btnFixed" onClick="rsvpNext('.q2');">Sì, certamente !</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.ko-q2');">No, sfortunatamente</div>
 	</div>
 
-	<div class="rsvp q2">
-		<p>Parfait ! Quel est votre nom ?</p>
-		<input class="inputLg btnFixed" type="text" id="guestName" required placeholder="Jean Valjean">
-		<div class="btnLg btnFixed" onClick="rsvpNext('.q3','name', document.querySelector('#guestName').value);">Continuer</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
+	<div class="rsvp ko-q2">
+		<p>Oh peccato :(<br>Come ti chiami ?</p>
+		<input class="inputLg btnFixed" type="text" id="guestName-ko" required placeholder="Jean Valjean">
+		<div class="btnLg btnFixed" onClick="rsvpNext('.ko','name', document.querySelector('#guestName-ko').value);">Invia</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Vai indietro</div>
 	</div>
 
 	<div class="rsvp ko">
-		<p>Oh :(</p>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
+		<p>Tutto è stato registrato, grazie mille !</p>
+	</div>
+
+	<div class="rsvp q2">
+		<p>Perfetto ! Come ti chiami ?</p>
+		<input class="inputLg btnFixed" type="text" id="guestName" required placeholder="Jean Valjean">
+		<div class="btnLg btnFixed" onClick="rsvpNext('.q3','name', document.querySelector('#guestName').value);">Vai avanti</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Vai indietro</div>
 	</div>
 
 	<div class="rsvp q3">
-		<p>Combien serez-vous ?</p>
+		<p>Quanti sarete ?</p>
 		<input class="inputLg btnFixed" type="number" id="guestNb" required maxlength="1">
-		<div class="btnLg btnFixed" onClick="rsvpNext('.q4','nb', document.querySelector('#guestNb').value);">Continuer</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q2');">Retour</div>
+		<div class="btnLg btnFixed" onClick="rsvpNext('.q4','nb', document.querySelector('#guestNb').value);">Vai avanti</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q2');">Vai indietro</div>
 	</div>
 
 	<div class="rsvp q4">
-		<p>Et pour finir, quelle est votre adresse postale ?</p>
+		<p>Per finire, qual'è il tuo indirizzo postale ?</p>
 		<input class="inputLg btnFixed" type="text" id="guestAddress" required placeholder="1 rue Grand rue, Cherbourg">
-		<div class="btnLg btnFixed" onClick="rsvpNext('.ok','address', document.querySelector('#guestAddress').value);">Envoyer</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q3');">Retour</div>
+		<div class="btnLg btnFixed" onClick="rsvpNext('.ok','address', document.querySelector('#guestAddress').value);">Invia</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q3');">Vai indietro</div>
 	</div>
 
 	<div class="rsvp ok">
-		<p>C'est enregistré, merci beaucoup !</p>
+		<p>Tutto è stato registrato, grazie mille !</p>
 	</div>
 
 	<div class="rsvp error">
-		<p>Aie, une erreur... je n'ai pas pu enregistrer les informations. Pourriez-vous me le signaler par email ?</p>
+		<p>Ahia, c'è stato un errore... non ho potuto registrare le informazioni, potete scrivercele via <a href="mailto:contact@valerieetchristophe.fr">mail</a> ?</p>
 	</div>
 
 	
@@ -91,183 +97,210 @@
 
 <section>
 
-	<h1 class="title">Qual è il programma?</h1>
-	
-	<div class="info left">
-		<img src="../img/mairie.png" class="nomobile">
-		<h2 class="subtitle">Mairie</h2>
-		<p>Nous nous marierons le vendredi 2 juillet 2022 à 14h30 à la mairie d'Agon-Coutainville,<br>2 Rue Louis Périer, Agon-Coutainville (50)</p>
-	</div>
-	
-
-	
-	<div class="info right">
-		<img src="../img/champagne2.png" class="nomobile">
-		<h2 class="subtitle">Cocktail</h2>
-		<p>Dès 17h30, ambiance plus détendue autour d'une flûte de champagne puis d'un cocktail dinatoire au colombier de la baie de Sienne,<br>17 bis rue de Cracqueville<br>50200 Heugueville-Sur-Sienne</p>
-	</div>
+	<h1 class="title">Qual'è il programma?</h1>
 	
 	<div class="info left">
 		<img src="../img/ceremonie.png" class="nomobile">
-		<h2 class="subtitle">Cérémonie religieuse</h2>
-		<p>La cérémonie religieuse <br>se déroulera en Italie <br>le samedi 3 juin 2023,<br> à Villa Guardia, Imperia<br></p>
+		<h2 class="subtitle">Cerimonia religiosa</h2>
+		<p>Il matrimonio religioso avrà luogo il sabato 3 giugno 2023, <br> alla parrocchia San Matteo Apostolo, <br>Piazza della Madonna 1, <br> Villa Guardia, <br>18027 Pontedassio (IM)</p>
 	</div>
+	
+	
+	<div class="info right">
+		<img src="../img/champagne2.png" class="nomobile">
+		<h2 class="subtitle">Cena</h2>
+		<p>Approfittiamo insieme di una coppa di prosecco e di una cena alla Villa Roseto, <br>Via Fanny Roncati Carli 19, <br>18100 Imperia (IM)</p>
+	</div>
+	
+		
+	<div class="info left">
+		<img src="../img/brunch.png" class="nomobile">
+		<h2 class="subtitle">Brunch</h2>
+		<p>Un brunch è organizzato l'indomani, <br>la domenica 4 giugno 2023, <br>a Diano Marina (IM)<br></p>
+	</div>
+	
+	
+ <!--	<div class="info right">
+		<img src="../img/ceremonie.png" class="nomobile">
+		<h2 class="subtitle">Cerimonia religiosa</h2>
+		<p> La cerimonia religiosa avrà luogo in Italia al mese di giugno 2023,<br> A Villa Guardia,<br>18027 Imperia<br></p>
+	</div> -->
 
     <!-- <img class="plan box" src="../img/plan.jpg">
     <p>Les différents lieux de la journée sont proches les uns des autres, il est tout à fait possible de ne se déplacer qu’à pied.</p>-->
 </section> 
 
 <section class="section s-hotel">
-		<h1 class="title">Où loger ?</h1>
-		<p>Vous trouverez aux alentours différentes propositions d'hébergements sur 
-		<a target="_blank" href="https://www.airbnb.fr/s/Agon~Coutainville/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_dates%5B%5D=april&flexible_trip_dates%5B%5D=may&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=calendar&query=Agon-Coutainville&place_id=ChIJO6cWtqwSDEgRsIW5T0gUDAQ&checkin=2022-07-02&checkout=2022-07-03&source=structured_search_input_header&search_type=autocomplete_click">Airbnb</a>, 
-		<a target="_blank" href="https://www.booking.com/searchresults.fr.html?label=gen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQm4ARfIAQ_YAQPoAQGIAgGoAgO4Aszjy5IGwAIB0gIkNWUzNzI2YzYtNTQzYi00Yzc4LTkyNTYtYjQxZWY4NTQzZWQz2AIE4AIB&sid=a1df52e60e3fdf2415ed4ae213bd2d99&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.fr.html%3Flabel%3Dgen173nr-1DCAEoggI46AdIM1gEaE2IAQGYAQm4ARfIAQ_YAQPoAQGIAgGoAgO4Aszjy5IGwAIB0gIkNWUzNzI2YzYtNTQzYi00Yzc4LTkyNTYtYjQxZWY4NTQzZWQz2AIE4AIB%3Bsid%3Da1df52e60e3fdf2415ed4ae213bd2d99%3Bsb_price_type%3Dtotal%26%3B&ss=Agon-Coutainville%2C+Basse-Normandie%2C+France&is_ski_area=&checkin_year=2022&checkin_month=7&checkin_monthday=2&checkout_year=2022&checkout_month=7&checkout_monthday=3&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&ss_raw=agon+coutain&ac_position=0&ac_langcode=fr&ac_click_type=b&dest_id=900041002&dest_type=city&place_id_lat=49.0413&place_id_lon=-1.58178&search_pageview_id=017069eabace00a8&search_selected=true&search_pageview_id=017069eabace00a8&ac_suggestion_list_length=5&ac_suggestion_theme_list_length=0">Booking.com</a>
-		et <a target="_blank" href="https://www.abritel.fr/search/keywords:agon-coutainville-normandie-france/arrival:2022-07-02/departure:2022-07-03?petIncluded=false&filterByTotalPrice=true">Abritel</a>.</p>
+		<h1 class="title">Dove alloggiare ?</h1>
+		<p>Nella zona troverete varie opzioni di alloggio su 
+		<a target="_blank" href="https://www.airbnb.it/s/Imperia--IM/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&date_picker_type=calendar&query=Imperia%2C%20Ligurie%2C%20Italie&place_id=ChIJ5T9PYihs0hIRBLseHjN2Jqw&checkin=2023-06-03&checkout=2023-06-04&source=structured_search_input_header&search_type=autocomplete_click">Airbnb</a>, 
+		<a target="_blank" href="https://www.booking.com/searchresults.it.html?checkin_monthday=3&ac_suggestion_list_length=5&sb_lp=1&dest_type=city&sb=1&is_ski_area=&group_adults=2&label=gen173nr-1DCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQ_YAQPoAQH4AQOIAgGoAgO4AvmJwZYGwAIB0gIkYjAwMjliOTctZDBhNi00NmU4LTg0NDMtZGEzN2M1ODMwMDZj2AIE4AIB&error_url=https%3A%2F%2Fwww.booking.com%2Findex.fr.html%3Flabel%3Dgen173nr-1DCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQ_YAQPoAQH4AQOIAgGoAgO4AvmJwZYGwAIB0gIkYjAwMjliOTctZDBhNi00NmU4LTg0NDMtZGEzN2M1ODMwMDZj2AIE4AIB%26sid%3Dc36dcc435614e7661f4f82155020f801%26sb_price_type%3Dtotal%26%26&ss_raw=imperia&sid=c36dcc435614e7661f4f82155020f801&src=index&checkout_month=6&checkout_monthday=4&search_selected=true&checkin_year=2023&auth_success=1&search_pageview_id=2408743cec110847&ac_langcode=fr&ac_click_type=b&place_id_lon=8.03375&ac_position=0&dest_id=-119237&b_h4u_keep_filters=&place_id_lat=43.8882&from_sf=1&checkin_month=6&ac_suggestion_theme_list_length=0&checkout_year=2023&src_elem=sb&no_rooms=1&ss=Imperia%2C+Ligurie%2C+Italie&group_children=0">Booking.com</a>
+		e <a target="_blank" href="https://www.casevacanza.it/search/5adf4762948df?arrival=2023-06-03&duration=1">CaseVacanza</a>.</p>
 		
 
 </section>
 
 
-<!--
 <section>
 	
-	<h1>Notre liste de mariage</h1>
-	<p>Chers amis, après 3 ans de vie commune, nous n'avons plus vraiment besoin de vaisselle ! Notre plus grand plaisir serait de partir en Lune de Miel en Thaïlande en pensant à vous 😊</p>
-    <p>Si vous souhaitez nous faire un cadeau, vous trouverez ci-dessous quelques éléments de notre voyage de noces que vous pouvez nous offrir.</p>
-    <p>Un grand merci 😍</p>
+	<h1>La nostra lista di nozze</h1>
+	<p>Cari amici, il nostro più grande piacere sarebbe quello di andare in viaggio di nozze in Polinesia nel 2023, pensando a voi 😊</p>
+    <p>Se volete farci un regalo, qui di seguito troverete alcuni degli elementi della nostra luna di miele che potete regalare.</p>
+	<p>E se volete aiutarci a arredare il nostro appartamento, ci sono anche idee regalo per voi!</p>
+    <p> Grazie Mille 😍</p>
 
     <div id="list-container">
 
         <div class="list-item"><div class="box">
-            <div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-            <div class="prix" rel="price_1HOsmMESd2YLxnCl6blSSesV">10 €</div>
-            <img src="../img/list/creme.jpg" />
+            <div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+            <div class="prix" rel="price_1LGPnj2EVnc8AHFkHYH1z6M7">20 €</div>
+            <img src="../img/list/cocktail.jpg" />
             <div class="list-text">
-                <h1>Une bonne crème solaire pour Guillaume</h1>
-                Sshhhh il vient du Nord... 🤫
+                <h1>Due cocktail da condividere di fronte alla spiaggia </h1>
+             A Fakarava
             </div>
         </div></div>
 
     	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOsmpESd2YLxnClHAXVHMC0">20 €</div>
-    		<img src="../img/list/cocktails.jpg" />
-    		<div class="list-text">
-    			<h1>Deux cocktails à partager au bord de la piscine</h1>
-    			En pensant à vous
-    		</div>
-    	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOsnKESd2YLxnClngFn9eoG">30 €</div>
-    		<img src="../img/list/biafine.jpg" />
-    		<div class="list-text">
-    			<h1>Deux tubes de Biafine</h1>
-    			Pour quand Guillaume oubliera de mettre de la crème solaire
-    		</div>
-    	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOso4ESd2YLxnCl9kwiEtLV">40 €</div>
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGPoJ2EVnc8AHFkPs2tmRjn">25 €</div>
     		<img src="../img/list/guide.jpg" />
     		<div class="list-text">
-    			<h1>Le guide des meilleurs trails de Thaïlande</h1>
-    			Quand va-t-il s'arrêter...?  🙄
+    			<h1>Una guida della Polinesia</h1>
+    			E delle Isole Marchesi
     		</div>
     	</div></div>
 
     	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOsoXESd2YLxnClbRkEULbK">50 €</div>
-    		<img src="../img/list/maillot.jpg" />
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGPou2EVnc8AHFkujvxmYGm">50 €</div>
+    		<img src="../img/list/verres.jpg" />
     		<div class="list-text">
-    			<h1>Un nouveau maillot de bain pour Diane</h1>
-    			c'est à dire le 42ème
+    			<h1>Un set di bicchieri à Bordeaux Riedel</h1>
+    			Il marchio preferito di Valérie
     		</div>
     	</div></div>
 
     	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOsp0ESd2YLxnCl43Fl3A8c">80 €</div>
-    		<img src="../img/list/plongee.jpg" />
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB7lG9ogWb9K4C7c8xENwA">50 €</div>
+    		<img src="../img/list/coupes.jpg" />
     		<div class="list-text">
-    			<h1>Une sortie de plongée</h1>
-    			Dans un des plus beau spot du monde
+    			<h1>Un set di flûtes da champagne Riedel</h1>
+    			Le bollicine sono la nostra passione
     		</div>
     	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOspdESd2YLxnClIxZF59au">100 €</div>
-    		<img src="../img/list/dinerromantique.jpg" />
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB7gG9ogWb9K4CRP7IoECa">50 €</div>
+    		<img src="../img/list/interile.jpg" />
     		<div class="list-text">
-    			<h1>Un dîner romantique seuls sur la plage</h1>
-    			Avec les bougies dans le sable et tout le tralala
+    			<h1>Un viaggio in kayak tra due isole</h1>
+    			Le braccia di Valérie adorano questo sport!
     		</div>
+    	</div></div>
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB7bG9ogWb9K4CSgpXwWr1">80 €</div>
+    		<img src="../img/list/bibliotheque.jpg" />
+    		<div class="list-text">
+    			<h1>Una partecipazione per la nostra biblioteca</h1>
+    			Per fare scomparire le pile di cartoni di libri in salotto</div>
     	</div></div>
 
     	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOspwESd2YLxnCl679BSML7">120 €</div>
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB7VG9ogWb9K4CB1oesW8h">100 €</div>
     		<img src="../img/list/avion.jpg" />
     		<div class="list-text">
-    			<h1>1000 km en avion pour partir au bout du monde</h1>
-    			Et peut être revenir
+    			<h1>1000 km in aereo per andare nel Pacifico</h1>
+    			E volare sopra le acque turchesi   		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB7BG9ogWb9K4CyraoY99n">100 €</div>
+    		<img src="../img/list/plongee.jpg" />
+    		<div class="list-text">
+    			<h1>Un'escursione subacquea</h1>
+    			Nei fondali piu belli del mondo
     		</div>
     	</div></div>
 
     	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOsqLESd2YLxnClGreY2fov">150 €</div>
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB75G9ogWb9K4CwFGFfzBH">120 €</div>
+    		<img src="../img/list/restaurant.jpg" />
+    		<div class="list-text">
+    			<h1>Una cena romantica sulla spiaggia</h1>
+    			Con i piedi sulla sabbia
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB71G9ogWb9K4CDRwasuMo">180 €</div>
     		<img src="../img/list/hotel.jpg" />
     		<div class="list-text">
-    			<h1>Une nuit dans un hôtel de rêve</h1>
-    			Avec piscine privée 😍
+    			<h1>Una notte in un Hotel da sogno</h1>
+    			Con i piedi nell'acqua
     		</div>
     	</div></div>
 
     	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOsqgESd2YLxnClgsfnR575">200 € </div>
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB6wG9ogWb9K4CyXRRuVlF">200 € </div>
     		<img src="../img/list/ile.jpg" />
     		<div class="list-text">
-    			<h1>Deux jours sur une île déserte</h1>
-    			Pas trop déserte quand même sinon Diane aura faim
+    			<h1>Due giorni su un'isola deserta</h1>
+    			Sole, mare e tranquillità
     		</div>
     	</div></div>
 
     	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix" rel="price_1HOsr7ESd2YLxnClIQdiscQm">350 €</div>
-    		<img src="../img/list/angkor.jpg" />
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB6rG9ogWb9K4CGQGnbDWc">300 €</div>
+    		<img src="../img/list/hawai.jpg" />
     		<div class="list-text">
-    			<h1>Un détour par le Cambodge</h1>
-    			Pour voir les temples d'Angkor
+    			<h1>Una deviazione alle Hawaii</h1>
+    			Per vedere Mauna Kea e Kauai
+    		</div>
+    	</div></div>
+		
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Regalare</span></div>
+    		<div class="prix" rel="price_1LGB6lG9ogWb9K4CategOpE7">320 €</div>
+    		<img src="../img/list/chaise.png" />
+    		<div class="list-text">
+    			<h1>Una sedia "Edito bleu velour"</h1>
+    			Per non mangiare seduti per terra
     		</div>
     	</div></div>
 
     	<div class="list-item"><div class="box">
     		<div class="offrir custom">
-                <input id="custom_price" type="number" placeholder="montant (en €)" />
-                <input id="custom_text" type="text" placeholder="Un petit message ?" />
-                <div class="btnLg" onClick="displayPayment(this);">Offrir</div>
+                <input id="custom_price" type="number" placeholder="Importo (in €)" />
+                <input id="custom_text" type="text" placeholder="Un piccolo messaggio ?" />
+                <div class="btnLg" onClick="displayPayment(this);">Regalare</div>
             </div>
-    		<div class="prix" rel="">Montant libre</div>
+    		<div class="prix" rel="">Importo libero</div>
     		<img src="../img/list/surprise.jpg" />
     		<div class="list-text">
-    			<h1>Quelque chose de particulier que vous aimeriez nous offrir ?</h1>
+    			<h1>Avete un'idea in particolare che vorreste regalarci ?</h1>
     		</div>
     	</div></div>
+		
 
     </div>
 
-</section> -->
+</section>
 
 
 <footer>
-	Fait avec ♥ par <a href="mailto:parisot.simon@gmail.com">Simon</a> pour Valérie et Christophe<br>
+	Creato con ♥ da <a href="mailto:parisot.simon@gmail.com">Simon</a> per Valérie e Christophe<br>
 </footer>
 
 </body>

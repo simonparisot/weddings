@@ -21,7 +21,7 @@
 /* GENERIC STYLE
 -------------------------------------------------- */
 
-body { background-color: #000; margin: 0; padding: 0; }
+body { background-color: #f9f9f9; margin: 0; padding: 0; }
 a { text-decoration: underline; color: inherit;  }
 p { margin-top: 0.2rem; }
 
@@ -67,7 +67,7 @@ section:nth-of-type(1):before {
 	width: 100%;
 	height: 100%;
 	z-index: -10;
-	background: #e1babf url("img/bg.jpg") center/cover no-repeat;
+	background: #f9f9f9 url("img/bg.jpg") center/cover no-repeat;
 }
 
 .savethedate { position: absolute; height: 100%; }
@@ -80,6 +80,7 @@ img#subtitle { width: 25%; }
 section:nth-of-type(2) { 
   /*background: #efefef;*/
   background: repeat url(img/watercolor.png);
+  border-top: 1px solid #ccc;
 }
 
 

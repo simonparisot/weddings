@@ -1,0 +1,26 @@
+{
+  "name": "store-to-dynamodb",
+  "version": "1.0.0",
+  "description": "AWS Lambda function to store JSON objects in a DynamoDB table",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest",
+    "zip": "zip -r deployment.zip . -x '*.git*' 'node_modules/*' '*.DS_Store'",
+    "deploy": "npm run zip && aws lambda update-function-code --function-name store-to-dynamodb --zip-file fileb://deployment.zip --region eu-west-1 --profile perso"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.457.0",
+    "@aws-sdk/lib-dynamodb": "^3.457.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Simon Parisot",
+  "license": "MIT"
+}
