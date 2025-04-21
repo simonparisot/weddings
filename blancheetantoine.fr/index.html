@@ -8,7 +8,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="theme-color" content="#000000">
-
+	<meta name="description" content="Site du mariage de Blanche et Antoine - 13 septembre 2025">
 
 	<title>Blanche & Antoine</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,371 +19,169 @@
 	<link rel="stylesheet" type="text/css" href="style.css?v2.0.5">
 	<link rel="stylesheet" type="text/css" href="style-mobile.css?v2.0.5">
 
-    <script src="https://js.stripe.com/v3/"></script>
-    <script src="payment.js"></script>
-    <script src="savethedate.js"></script>
-    
-
 </head>
 <body>
 
-<section id="hero">
-	
-	<div id="title">
-		<span>Blanche</span> <br class="onlymobile" />
-		<span style="font-size:1rem;">&</span>
-		<span>Antoine</span>
-	</div>
-	<div id="subtitle">
-		<span>13 septembre 2025</span> <br/>
-		<span>Château de La Rabatelière</span>
-	</div>
-
-</section>
-
-<section id="savethedate">
-
-	<h1 class="title">Serez-vous parmi nous ?</h1>
-
-    <div class="rsvp q1 currentQuestion">
-		<div class="btnLg btnFixed" onClick="rsvpNext('.q2');">Oui bien sûr !</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.ko-q2');">Non malheureusement</div>
-		<br>
-		<p>Merci de nous indiquer votre présence avant le 30 juin 2025.</p>
-		<p>Si vous voulez changer votre réponse, répondez simplement une seconde fois, on se débrouillera ;)</p>
-	</div>
-
-
-	<div class="rsvp ko-q2">
-		<p>Oh :(<br>Quel est votre nom ?</p>
-		<input class="inputLg btnFixed" type="text" id="guestName-ko" required placeholder="Jean Valjean">
-		<div class="btnLg btnFixed" onClick="rsvpNext('.ko','name', document.querySelector('#guestName-ko').value);">Continuer</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
-	</div>
-
-	<div class="rsvp ko">
-		<p>C'est enregistré, merci !</p>
-	</div>
-
-
-	<div class="rsvp q2">
-		<p>Parfait ! Quel est votre nom ?</p>
-		<input class="inputLg btnFixed" type="text" id="guestName" required placeholder="Jean Valjean">
-		<div class="btnLg btnFixed" onClick="rsvpNext('.q3','name', document.querySelector('#guestName').value);">Continuer</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
-	</div>
-
-	<div class="rsvp q3">
-		<p>Combien serez-vous ?</p>
-		<input class="inputLg btnFixed" type="number" id="guestNb" required>
-		<div class="btnLg btnFixed" onClick="rsvpNext('.q4','nb', document.querySelector('#guestNb').value);">Continuer</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q2');">Retour</div>
-	</div>
-
-	<div class="rsvp q4">
-		<p>Viendrez-vous avez des enfants ?</p>
-		<div class="btnLg btnFixed" onClick="rsvpNext('.q4oui', 'kids', true);">Oui</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q5', 'kids', false);">Non</div>
-	</div>
-
-	<div class="rsvp q4oui">
-		<p>Quels âges ont-ils ?</p>
-		<input class="inputLg btnFixed" type="text" id="kidsAge" required placeholder="2 ans et 5 ans">
-		<div class="btnLg btnFixed" onClick="rsvpNext('.q5','kidsAge', document.querySelector('#kidsAge').value);">Continuer</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q4');">Retour</div>
-	</div>
-
-	<div class="rsvp q5">
-		<p>Souhaitez-vous des menus végétariens pour le diner ?</p>
-		<div class="btnLg btnFixed" onClick="rsvpNext('.q5oui', 'veggy', true);">Oui</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.ok', 'veggy', false);">Non</div>
-	</div>
-
-	<div class="rsvp q5oui">
-		<p>Combien de menus végétariens ?</p>
-		<input class="inputLg btnFixed" type="number" id="veggyNb" required>
-		<div class="btnLg btnFixed" onClick="rsvpNext('.ok','veggyNb', document.querySelector('#veggyNb').value);">Envoyer</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q5');">Retour</div>
-	</div>
-	<div class="rsvp q5oui">
-		<p>Et pour finir, envie d'écouter un tube ?</p>
-		<input class="inputLg btnFixed" type="text" id="tube" required placeholder="La macarena">
-		<div class="btnLg btnFixed" onClick="rsvpNext('.ok','tube', document.querySelector('#tube').value);">Envoyer</div>
-		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q5');">Pas d'idée, à vous de décider !</div>
-	</div>
-
-	<div class="rsvp ok">
-		<p>C'est enregistré, merci beaucoup !</p>
-	</div>
-
-	<div class="rsvp error">
-		<p>Aie, une erreur... je n'ai pas pu enregistrer les informations. Pourriez-vous me le signaler par email ?</p>
-	</div>
-
-</section>
-
-<section id="program">
-
-	<h1 class="title">Quel est le programme ?</h1>
-	
-	<div class="info left">
-		<h2 class="subtitle">Cérémonie de mariage</h2>
-		<p>Notre messe de mariage sera célébrée le samedi 13 septembre à 15h30 en l'église Saint Charles, 85250 La Rabatelière.</p>
-	</div>
-	
-	<div class="info right">
-		<h2 class="subtitle">Réception</h2>
-		<p>La réception commencera à 17h30 et ira jusqu'au petit jour !<br />Rendez-vous au Château de La Rabatelière.</p>
-	</div>
-
-</section>
-
-<section id="info">
-
-	<h1 class="title">Quelques infos utiles</h1>
-
-	<h2>Dress code</h2>
-
-	<p>Une seule indication : chapeau bienvenu pour les femmes !</p>
-
-	<br/>
-
-	<h2>Comment se rendre à La Rabatelière ?</h2>
-	
-    <p>
-    Très simple :)
-    <ul>
-    	<li>En train : gare TGV de Nantes ou gare TER "L'Herbergement - Les Brouzils"</li>
-		<li>En avion : aéroport de Nantes</li>
-	</ul>
-	</p>
-
-	<p>Le jour J, vous pourrez garer votre véhicule dans un parking dédié avant la cérémonie religieuse et le récupérer a la fin de la soirée.</p>
-
-</section>
-
-<section id="housing">
-
-	<h1 class="title">Où loger ?</h1>
-	
-    <p>Vous trouverez ci-dessous une carte des logements proches du lieu du mariage.</p>
-    <a target="_blank" href="https://www.google.com/maps/d/u/0/edit?mid=17Sp4HVH7BDKhcnx_QaHLt3GhM4E70G4&usp=sharing"><div class="btnLg btnFixed">Carte</div></a>
-
-</section>
-
-<section id="list">
-	
-	<h1>Notre liste de mariage</h1>
-	<p>Chers amis, chère famille, le plus beau cadeau pour nous est de vous avoir à nos côtés pour célébrer ce grand jour !</p>
-	<p>Si vous souhaitez nous gâter davantage, voici quelques idées. Des éléments pour enrichir notre passion pour le sport et la cuisine ou une participation libre pour nous aider à partir en lune de miel.</p>
-	Merci du fond du cœur pour votre générosité et votre présence précieuse. 😍</p>
-
-    <div id="list-container">
-
-    	<div id="test" class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">30</span> €</div>
-    		<img src="img/pagaie.webp" />
-    		<div class="list-text">
-    			<h1>Une pagaie</h1>
-    			<span>PS: il y en a une là-bas sous le cocotier</span>
-    		</div>
-    	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">40</span> €</div>
-    		<img src="img/switch.webp" />
-    		<div class="list-text">
-    			<h1>Jeu Switch "It Takes Two"</h1>
-    			<span>Parce qu'on a déjà fini Overcooked 2 ;)</span>
-    		</div>
-    	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">40</span> €</div>
-    		<img src="img/aloadessert.webp" />
-    		<div class="list-text">
-    			<h1>Fourchettes à dessert "Aloa miroir"</h1>
-    			<span>Set de 6</span>
-    		</div>
-    	</div></div>
+	<section id="hero">
 		
-		<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">60</span> €</div>
-    		<img src="img/aloamiroir.webp" />
-    		<div class="list-text">
-    			<h1>Couteaux à fromage "Aloa miroir"</h1>
-    			<span>Parce que le fromage c'est la vie </span>
-    		</div>
-    	</div></div>
+		<div id="title">
+			<span>Blanche</span> <br class="onlymobile" />
+			<span style="font-size:1rem;">&</span>
+			<span>Antoine</span>
+		</div>
+		<div id="subtitle">
+			<span>13 septembre 2025</span> <br/>
+			<span>Château de La Rabatelière</span>
+		</div>
+
+	</section>
+
+	<section id="savethedate">
+
+		<h1 class="title">Serez-vous parmi nous ?</h1>
+
+		<div class="rsvp q1 currentQuestion">
+			<div class="btnLg btnFixed" onClick="rsvpNext('.q2');">Oui bien sûr !</div>
+			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.ko-q2');">Non malheureusement</div>
+			<br>
+			<p>Nous avons hâte de célébrer avec vous ce grand jour !</p>
+			<p>Réponse souhaitée avant le 30 juin 2025.</p>
+			<p>Un souci dans la réponse ? Répondez une deuxième fois, nous utiliserons la réponse la plus récente.</p>
+		</div>
+
+
+		<div class="rsvp ko-q2">
+			<p>Oh :(<br>Quel est votre nom ?</p>
+			<input class="inputLg btnFixed" type="text" id="guestName-ko" required placeholder="Jean Valjean">
+			<div class="btnLg btnFixed" onClick="rsvpNext('.ko','name', document.querySelector('#guestName-ko').value);">Continuer</div>
+			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
+		</div>
+
+		<div class="rsvp ko">
+			<p>C'est enregistré, merci !</p>
+		</div>
+
+
+		<div class="rsvp q2">
+			<p>Parfait ! Quel est votre nom ?</p>
+			<input class="inputLg btnFixed" type="text" id="guestName" required placeholder="Jean Valjean">
+			<div class="btnLg btnFixed" onClick="rsvpNext('.q3','name', document.querySelector('#guestName').value);">Continuer</div>
+			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
+		</div>
+
+		<div class="rsvp q3">
+			<p>Combien serez-vous ?</p>
+			<input class="inputLg btnFixed" type="number" id="guestNb" required>
+			<div class="btnLg btnFixed" onClick="rsvpNext('.q4','nb', document.querySelector('#guestNb').value);">Continuer</div>
+			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q2');">Retour</div>
+		</div>
+
+		<div class="rsvp q4">
+			<p>Viendrez-vous avec des enfants ?</p>
+			<div class="btnLg btnFixed" onClick="rsvpNext('.q4oui', 'kids', true);">Oui</div>
+			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q5', 'kids', false);">Non</div>
+		</div>
+
+		<div class="rsvp q4oui">
+			<p>Quels âges ont-ils ?</p>
+			<input class="inputLg btnFixed" type="text" id="kidsAge" required placeholder="2 ans et 5 ans">
+			<div class="btnLg btnFixed" onClick="rsvpNext('.q5','kidsAge', document.querySelector('#kidsAge').value);">Continuer</div>
+			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q4');">Retour</div>
+		</div>
+
+		<div class="rsvp q5">
+			<p>Souhaitez-vous des menus végétariens pour le diner ?</p>
+			<div class="btnLg btnFixed" onClick="rsvpNext('.q5oui', 'veggy', true);">Oui</div>
+			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.ok', 'veggy', false);">Non</div>
+		</div>
+
+		<div class="rsvp q5oui">
+			<p>Combien de menus végétariens ?</p>
+			<input class="inputLg btnFixed" type="number" id="veggyNb" required>
+			<div class="btnLg btnFixed" onClick="rsvpNext('.ok','veggyNb', document.querySelector('#veggyNb').value);">Envoyer</div>
+			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q5');">Retour</div>
+		</div>
+		<div class="rsvp q5oui">
+			<p>Et pour finir, envie d'écouter un tube ?</p>
+			<input class="inputLg btnFixed" type="text" id="tube" required placeholder="La macarena">
+			<div class="btnLg btnFixed" onClick="rsvpNext('.ok','tube', document.querySelector('#tube').value);">Envoyer</div>
+			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q5');">Pas d'idée, à vous de décider !</div>
+		</div>
+
+		<div class="rsvp ok">
+			<p>C'est enregistré, merci beaucoup !</p>
+		</div>
+
+		<div class="rsvp error">
+			<p>Aie, une erreur... je n'ai pas pu enregistrer les informations. Pourriez-vous me le signaler par email ?</p>
+		</div>
+
+	</section>
+
+	<section id="program">
+
+		<h1 class="title">Quel est le programme ?</h1>
 		
-		<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">70</span> €</div>
-    		<img src="img/creuse.webp" />
-    		<div class="list-text">
-    			<h1>Assiettes creuses</h1>
-    			<span>Set de 6</span>
-    		</div>
-    	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">70</span> €</div>
-    		<img src="img/dessert.webp" />
-    		<div class="list-text">
-    			<h1>Assiettes à dessert</h1>
-    			<span>Set de 6</span>
-    		</div>
-    	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">85</span> €</div>
-    		<img src="img/plate.webp" />
-    		<div class="list-text">
-    			<h1>Assiettes plates </h1>
-    			<span>Set de 6</span>
-    		</div>
-    	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">150</span> €</div>
-    		<img src="img/vase.jpg" />
-    		<div class="list-text">
-    			<h1>Vase </h1>
-    			<span>Pour les fleurs !</span>
-    		</div>
-    	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">200</span> €</div>
-    		<img src="img/meuble.webp" />
-    		<div class="list-text">
-    			<h1>Meuble à vin</h1>
-    			<span>Pour une température optimale de dégustation</span>
-    		</div>
-    	</div></div>
-
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">260</span> €</div>
-    		<img src="img/kayak.jpg" />
-    		<div class="list-text">
-    			<h1>Un kayak gonflable</h1>
-    			<span>Pour aller avec les pagaies !</span>
-    		</div>
-    	</div></div>
+		<div class="info left">
+			<h2 class="subtitle">Cérémonie</h2>
+			<p>La messe de mariage sera célébrée
+				le samedi 13 septembre à 15h30
+				en l'église Saint Charles
+				de La Rabatelière.</p>
+		</div>
 		
-		
-		<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">300</span> €</div>
-    		<img src="img/bilig.webp" />
-    		<div class="list-text">
-    			<h1>Une crêpière Bilig</h1>
-    			<span>Pour être de vrais futurs bretons !</span>
-    		</div>
-    	</div></div>
+		<div class="info right">
+			<h2 class="subtitle">Réception</h2>
+			<p>Le cocktail commencera à 17h30
+				Vous vous laisserez guider après la messe
+				jusqu'au Château de La Rabatelière.</p>
+		</div>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">330</span> €</div>
-    		<img src="img/flute.jpg" />
-    		<div class="list-text">
-    			<h1>Flûtes à champagne en cristal</h1>
-    			<span>Pour servir le champagne avec les galettes ;)</span>
-    		</div>
-    	</div></div>
+	</section>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">500</span> €</div>
-    		<img src="img/robot.webp" />
-    		<div class="list-text">
-    			<h1>Un robot pâtissier</h1>
-    		<span>Monter les oeufs en neige à la main, c'est long</span>
-    		</div>
-    	</div></div>
+	<section id="info">
 
-		<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">500</span> €</div>
-    		<img src="img/tente.jpg" />
-    		<div class="list-text">
-    			<h1>Notre tente de bikepacking</h1>
-    			<span>Pour voyager léger sur les routes et les chemins d'Europe</span>
-    		</div>
-    	</div></div>
+		<h1 class="title">Quelques infos utiles</h1>
 
-		<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">600</span> €</div>
-    		<img src="img/diner.webp" />
-    		<div class="list-text">
-    			<h1>Un dîner dans un 3 étoiles</h1>
-    			<span>Pour un repas en amoureux inoubliable !</span>
-    		</div>
-    	</div></div>
+		<h2>Conseil fashion</h2>
+		<p>Chapeaux bienvenus pour les femmes et cravates pour les hommes.</p>
+		<br/>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">750</span> €</div>
-    		<img src="img/retro.jpg" />
-    		<div class="list-text">
-    			<h1>Un rétroprojecteur</h1>
-    			<span>Pour savourer Grease et les Matchs du Racing sur grand écran !</span>
-    		</div>
-    	</div></div>
+		<h2>Se rendre à La Rabatelière</h2>
+		<p> Très simple :)
+		<ul>
+			<li>En train : gare TGV de Nantes ou gare TER "L'Herbergement - Les Brouzils</li>
+			<li>En avion : aéroport de Nantes</li>
+		</ul></p>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">780</span> €</div>
-    		<img src="img/plancha.webp" />
-    		<div class="list-text">
-    			<h1>Plancha club électrique</h1>
-    			<span>Pas d'été sans grillade pour savourer</span>
-    		</div>
-    	</div></div>
+		<p>Le jour J, vous pourrez garer votre véhicule dans un parking dédié avant la cérémonie et le récupérer à la fin de la soirée.</p>
+		<p>Un service de navette sera mis à disposition à partir de 2h00 pour que les plus festifs puissent rentrer en toute sécurité.</p>
 
-    		<div class="list-item"><div class="box">
-    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
-    		<div class="prix"><span class="product_price">1500</span> €</div>
-    		<img src="img/mix.webp" />
-    		<div class="list-text">
-    			<h1>Thermomix</h1>
-    			<span>Pour cuisiner tout</span>
-    		</div>
-    	</div></div>
+	</section>
 
-    	<div class="list-item"><div class="box">
-    		<div class="offrir custom">
-                <input id="custom_price" type="number" placeholder="montant (en €)" />
-                <input id="custom_text" type="text" placeholder="Un petit message ?" />
-                <input id="custom_img" type="hidden" value="img/japon.webp" />
-                <div class="btnLg" onClick="displayPayment(this);">Offrir</div>
-            </div>
-    		<div class="prix" rel="">Montant libre</div>
-    		<img src="img/japon.webp" />
-    		<div class="list-text">
-    			<h1>Participation à la lune de miel</h1>
-    			<span>Nous irons au pays du Soleil Levant</span>
-    		</div>
-    	</div></div>
+	<section id="housing">
 
-    </div>
+		<h1 class="title">Où loger ?</h1>
+		<a target="_blank" href="https://www.google.com/maps/d/u/0/edit?mid=17Sp4HVH7BDKhcnx_QaHLt3GhM4E70G4&usp=sharing"><div class="btnLg btnFixed">Carte interactive ici</div></a>
 
-</section>
+	</section>
 
+	<section id="list">
+		<h1 class="title">Y a-t-il une liste de mariage ?</h1>
+		<p>Oui, elle est accessible ici :</p>
+		<a href="liste.html"><div class="btnLg btnFixed">Voir la liste</div></a>
+	</section>
 
-<footer>
-	Fait avec ♥ par <a href="mailto:parisot.simon@gmail.com">Simon</a> pour Blanche & Antoine<br>
-</footer>
+	<section id="photos">
+		<h1 class="title">Ou trouver les photos ?</h1>
+		<p>Les photos seront disponibles ici.</p>
+	</section>
+
+	<footer>
+		Fait avec ♥ par <a href="mailto:parisot.simon@gmail.com">Simon</a> pour Blanche & Antoine<br>
+	</footer>
+
+    <script src="savethedate.js"></script>
 
 </body>
 
