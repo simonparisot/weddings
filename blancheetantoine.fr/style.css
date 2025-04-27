@@ -83,7 +83,7 @@ section h2 {
     background-image: 
         linear-gradient(to bottom, black, transparent 30%),
         linear-gradient(to top, black, transparent 20%),
-        url('img/bg2.jpg');
+        url('img/bg5.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -176,7 +176,7 @@ section#photos {
 section#housing {
     color: #2d4737;
     background-color: #ffffff;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8) ), url("img/buissons.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8) ), url("img/buissons.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center 36%;
@@ -229,7 +229,7 @@ section#list {
     position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 1rem;
+  font-size: 1.6rem;
   padding: 2px 10px;
   background: rgba(255,255,255,.8);
   border-radius: 4px;

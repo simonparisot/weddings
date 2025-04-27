@@ -9,7 +9,7 @@
 	}
 
 	section h1 { font-size: 2.8rem; line-height: 1; }
-	section h2 { font-size: 1.4rem; margin-top: 2rem; }
+	section h2 { font-size: 2rem; margin-top: 2rem; }
 	section h3 { font-size: 2rem; }
 
 	section#hero {
@@ -41,7 +41,7 @@
 	    background-image: 
 	        linear-gradient(to bottom, black, transparent 30%),
 	        linear-gradient(to top, black, transparent 20%),
-	        url('img/bg2.jpg');
+	        url('img/bg3.jpg');
 	}
 }
 
