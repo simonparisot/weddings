@@ -83,9 +83,9 @@ section h2 {
     background-image: 
         linear-gradient(to bottom, black, transparent 30%),
         linear-gradient(to top, black, transparent 20%),
-        url('img/bg5.jpg');
+        url('img/bg9.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center 33%;
     background-repeat: no-repeat;
     height: 100vh;
     height: 100svh;

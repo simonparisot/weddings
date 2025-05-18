@@ -1,6 +1,6 @@
 // Payment handling on the frontend for the Stripe backend.
 
-var stripe_account = "acct_1OvMxC2HBTz5QEJO";
+var stripe_account = "acct_1RQE5eCN5F3swH2o";
 var stripe = Stripe('pk_live_51LGBvIFydABlduG3Yx6axMVdv4LQ6DQljmkAxQeZPkZuJSVgMeTJoHc4C26BwpjO15ie3lcXDOzhJHwcLL7r7KfB00b7HtQ4y1', {
 //var stripe = Stripe('pk_test_51LGBvIFydABlduG3zSShZpIbNkIUyfJSsbFUEvzwjp7Gp4R4EyAs1w2cYb1vdxlGVbJ36WHjIBF1PhGtKFQWyPwW00KtaMO0be', {
   stripeAccount: stripe_account,
