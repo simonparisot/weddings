@@ -44,3 +44,25 @@
 	        url('img/bg9.jpg');
 	}
 }
+
+@media (min-width: 801px) {
+    
+    .nomobile { display: initial; }
+	.onlymobile { display: none; }
+
+    #title {
+        font-size: 5rem;
+    }
+
+    #subtitle {
+        font-size: 2rem;
+    }
+
+    #hero {
+	    background-image: 
+	        linear-gradient(to bottom, black, transparent 30%),
+	        linear-gradient(to top, black, transparent 20%),
+	        url('img/bg9.jpg');
+		background-position: center 33%;
+	}
+}
