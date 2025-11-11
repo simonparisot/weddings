@@ -39,136 +39,67 @@
 	<section id="savethedate">
 
 		<h1 class="title">Serez-vous parmi nous ?</h1>
-
-		<div class="rsvp q1 currentQuestion">
-			<div class="btnLg btnFixed" onClick="rsvpNext('.q2');">Oui bien sûr !</div>
-			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.ko-q2');">Non malheureusement</div>
-			<br>
-			<p>Nous avons hâte de célébrer avec vous ce grand jour !</p>
-			<p>Réponse souhaitée avant le 30 juin 2025.</p>
-			<p>Un souci dans la réponse ? Répondez une deuxième fois, nous utiliserons la réponse la plus récente.</p>
-		</div>
-
-
-		<div class="rsvp ko-q2">
-			<p>Oh :(<br>Quel est votre prénom et nom ?</p>
-			<input class="inputLg btnFixed" type="text" id="guestName-ko" required placeholder="Jean Valjean">
-			<div class="btnLg btnFixed" onClick="rsvpNext('.ko','name', document.querySelector('#guestName-ko').value);">Continuer</div>
-			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
-		</div>
-
-		<div class="rsvp ko">
-			<p>C'est enregistré, merci !</p>
-		</div>
-
-
-		<div class="rsvp q2">
-			<p>Parfait ! Quel est votre prénom et nom ?</p>
-			<input class="inputLg btnFixed" type="text" id="guestName" required placeholder="Jean Valjean">
-			<div class="btnLg btnFixed" onClick="rsvpNext('.q3','name', document.querySelector('#guestName').value);">Continuer</div>
-			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
-		</div>
-
-		<div class="rsvp q3">
-			<p>Combien serez-vous ?</p>
-			<input class="inputLg btnFixed" type="number" id="guestNb" required>
-			<div class="btnLg btnFixed" onClick="rsvpNext('.q4','nb', document.querySelector('#guestNb').value);">Continuer</div>
-			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q2');">Retour</div>
-		</div>
-
-		<div class="rsvp q4">
-			<p>Viendrez-vous avec des enfants ?</p>
-			<div class="btnLg btnFixed" onClick="rsvpNext('.q4oui', 'kids', true);">Oui</div>
-			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q5', 'kids', false);">Non</div>
-		</div>
-
-		<div class="rsvp q4oui">
-			<p>Quels âges ont-ils ?</p>
-			<input class="inputLg btnFixed" type="text" id="kidsAge" required placeholder="2 ans et 5 ans">
-			<div class="btnLg btnFixed" onClick="rsvpNext('.q5','kidsAge', document.querySelector('#kidsAge').value);">Continuer</div>
-			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q4');">Retour</div>
-		</div>
-
-		<div class="rsvp q5">
-			<p>Souhaitez-vous des menus végétariens pour le diner ?</p>
-			<div class="btnLg btnFixed" onClick="rsvpNext('.q5oui', 'veggy', true);">Oui</div>
-			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.ok', 'veggy', false);">Non</div>
-		</div>
-
-		<div class="rsvp q5oui">
-			<p>Combien de menus végétariens ?</p>
-			<input class="inputLg btnFixed" type="number" id="veggyNb" required>
-			<div class="btnLg btnFixed" onClick="rsvpNext('.ok','veggyNb', document.querySelector('#veggyNb').value);">Envoyer</div>
-			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q5');">Retour</div>
-		</div>
-		<div class="rsvp q5oui">
-			<p>Et pour finir, envie d'écouter un tube ?</p>
-			<input class="inputLg btnFixed" type="text" id="tube" required placeholder="La macarena">
-			<div class="btnLg btnFixed" onClick="rsvpNext('.ok','tube', document.querySelector('#tube').value);">Envoyer</div>
-			<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q5');">Pas d'idée, à vous de décider !</div>
-		</div>
-
-		<div class="rsvp ok">
-			<p>C'est enregistré, merci beaucoup !</p>
-		</div>
-
-		<div class="rsvp error">
-			<p>Aie, une erreur... je n'ai pas pu enregistrer les informations. Pourriez-vous me le signaler par email ?</p>
-		</div>
+		<p>Nous avons hâte de célébrer avec vous ce grand jour !</p>
+		<p>Merci de nous indiquer votre présence avant le 31 mars 2026, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfH4wJ-AO1o9u5wOYP5r8sLIc_dML6vC3upLV7Cq3obdhb2Zw/viewform?usp=header">en cliquant ici</a>.</p>
 
 	</section>
 
 	<section id="program">
 
 		<h1 class="title">Quel est le programme ?</h1>
+
+		<p>Pour les plus jeunes, le début des festivités commencent dès le mercredi soir.
+			<br>Es-tu jeune ? Toi seul peut répondre à cette question !</p>
 		
 		<div class="info left">
-			<h2 class="subtitle">Cérémonie</h2>
-			<p>La messe de mariage sera célébrée
-				le samedi 13 septembre à 15h30
-				en l'église Saint Charles
-				de La Rabatelière.</p>
+			<h2 class="subtitle">Soirée d'accueil</h2>
+			<p>Nous serons ravis de vous accueillir dès le vendredi soir à 19h au Clos des Pins pour un cockatil dînatoire (<a href="https://maps.app.goo.gl/UcE3LcYbiGbiFUcZA?g_st=iw">pour l'adresse, suivez ce lien</a>)</p>
 		</div>
 		
 		<div class="info right">
-			<h2 class="subtitle">Réception</h2>
-			<p>Le cocktail commencera à 17h30
-				Vous vous laisserez guider après la messe
-				jusqu'au Château de La Rabatelière.</p>
+			<h2 class="subtitle">Cérémonie</h2>
+			<p>La cérémonie religieuse aura lieu en l'Eglise de Saint-Jean Baptiste dans le village de Coti à 16h15 (<a href="https://maps.app.goo.gl/DsW9SxgU4v8R7VGq8?g_st=iw">pour l'adresse, suivez ce lien</a>).</p>
+		</div>
+
+		<div class="info left">
+			<h2 class="subtitle">Réception & Soirée</h2>
+			<p>Le cocktail commencera à 18h00 au domaine de Saparella (<a href="https://maps.app.goo.gl/43rPYtHEoKbLChAY9?g_st=iw">pour l'adresse, suivez ce lien</a>).</p>
+		</div>
+		
+		<div class="info right">
+			<h2 class="subtitle">Brunch</h2>
+			<p>Le brunch aura lieu le lendemain au même endroit. Le lieu étant au bord de la plage, nous vous conseillons un retour tard dans l'après-midi pour profiter au maximum de notre belle Ile de beauté.</p>
 		</div>
 
 	</section>
 
 	<section id="info">
 
-		<h1 class="title">Quelques infos utiles</h1>
+		<h1 class="title">Les transports</h1>
 
-		<h2>Conseil fashion</h2>
-		<p>Chapeaux bienvenus pour les femmes et cravates pour les hommes.</p>
-		<br/>
-
-		<h2>Se rendre à La Rabatelière</h2>
-		<p>
+		<p>Pour vous rendre sur le lieu du mariage, plusieurs options :</p>
+		<br>
 		<ul>
-			<li>En train : gare TGV de Nantes ou gare TER L'Herbergement - Les Brouzils</li>
-			<li>En avion : aéroport de Nantes</li>
+			<li>En avion : aéroport d'Ajaccio</li>
+			<li>En bateau : ferry depuis Toulon, Marseille ou Nice</li>
 		</ul></p>
 
-		<p>Le jour J, vous pourrez garer votre véhicule dans un parking dédié avant la cérémonie et le récupérer à la fin de la soirée.</p>
-		<p>Un service de navette sera mis à disposition à partir de 2h00 pour que les plus festifs puissent rentrer en toute sécurité.</p>
+		<p>Il est fortement recommandé d'être véhiculé car le lieu du mariage est relativement éloigné de Porticcio</p>
+
+		<p>Il est également conseillé de dormir sur place le samedi soir, dans des tipis dotés de lits que nous mettons à votre disposition. Cependant, un service de navette sera mis à disposition à partir de minuit pour que les plus festifs puissent rentrer en toute sécurité.</p>
 
 	</section>
 
 	<section id="housing">
 
-		<h1 class="title">Où loger ?</h1>
-		<a target="_blank" href="https://www.google.com/maps/d/u/0/edit?mid=17Sp4HVH7BDKhcnx_QaHLt3GhM4E70G4&usp=sharing"><div class="btnLg btnFixed">Carte interactive ici</div></a>
+		<h1 class="title">L'hébergement</h1>
+		<p>Le soir du mariage, il est possible (et conseillé) de dormir sur place (tipis avec lits mis à disposition).</p>
 
 	</section>
 
 	<section id="list">
 		<h1 class="title">Y a-t-il une liste de mariage ?</h1>
-		<p>Oui, elle est accessible ici :</p>
+		<p>Nous serions extrêmement heureux de vous compter parmi nous pour partager ce moment, votre présence constitue déjà en elle-même un cadeau ! Si vous souhaitez également participer à un des cadeaux de notre liste de mariage, vous pouvez y accéder en suivant le lien ci-dessous :</p>
 		<a href="liste.html"><div class="btnLg btnFixed">Voir la liste</div></a>
 	</section>
 

@@ -37,15 +37,15 @@ section h2 {
     margin-top: 20px;
     cursor: pointer !important;
     box-shadow: 2px 2px 5px rgba(0,0,0,.2);
-    background-color: #f4d6a0;
-    color: #2f4b66;
-    border: 3px solid #f4d6a0;
+    background-color: #ffffff;
+    color: #222222;
+    border: 3px solid #eeeeee;
     box-sizing: border-box;
     display: inline-block;
 }
 
 .btnLg:hover { 
-    border: 3px solid #2d4737;
+    border: 3px solid #999999;
 }
 
 .btnFixed {
@@ -73,10 +73,7 @@ section h2 {
 #hero {
     position: relative;
     background-color: #000000;
-    background-image: 
-        linear-gradient(to bottom, black, transparent 30%),
-        linear-gradient(to top, black, transparent 20%),
-        url('img/bg.jpg');
+    background-image: url('img/bg.jpg');
     background-size: cover;
     background-position: center 65%;
     background-repeat: no-repeat;
@@ -85,7 +82,7 @@ section h2 {
     box-sizing: border-box;
     overflow: hidden;
     text-align: center;
-    color: #f4d6a0;
+    color: #ffffff;
     text-shadow: 0 0 6px #000;
     font-family: 'EB Garamond', serif;
 }
@@ -113,11 +110,11 @@ section h2 {
 /* -----------------------   SAVE THE DATE   --------------------------- */
 
 section#savethedate {
-    background-color: #2f4b66;
+    background-color: #cb8868;
     padding-bottom: 50px;
     padding-top: 50px;
     box-shadow: 2px 2px 12px #000;
-    color: #faf8f4;
+    color: #ffffff;
 }
 
 section#savethedate > h1 {
@@ -135,19 +132,15 @@ section#savethedate > h1 {
 /* -----------------------   PROGRAM   --------------------------- */
 
 section#program { 
-    background: #eee;
-    color: #2d4737;
-}
-
-section#program h1, section#program h1 {
-    color: #2d4737;
+    background: #ffffff;
+    color: #222222;
 }
 
 /* -----------------------   INFO   --------------------------- */
 
 section#info { 
-    color: #faf8f4;
-    background-color: #2f4b66;
+    background: #cb8868;
+    color: #ffffff;
 }
 
 .info.right { padding-left:  60%; text-align: right; }
@@ -159,22 +152,22 @@ section#info {
 /* -----------------------   PHOTOS   --------------------------- */
 
 section#photos { 
-    background: #eee;
-    color: #2d4737;
+    background: #ffffff;
+    color: #222222;
 }
 
 /* -----------------------   HOUSING   --------------------------- */
 
 section#housing {
-    background: #eee;
-    color: #2d4737;
+    background: #ffffff;
+    color: #222222;
 }
 
 /* -----------------------   LIST   --------------------------- */
 
 section#list { 
-    color: #faf8f4;
-    background-color: #2f4b66;
+    background: #cb8868;
+    color: #ffffff;
 }
 
 #list-container { 

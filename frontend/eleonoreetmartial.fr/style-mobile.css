@@ -38,10 +38,7 @@
 	}
 
     #hero {
-	    background-image: 
-	        linear-gradient(to bottom, black, transparent 30%),
-	        linear-gradient(to top, black, transparent 20%),
-	        url('img/bg.jpg');
+	    background-image: url('img/bg.jpg');
 	}
 }
 
@@ -59,10 +56,7 @@
     }
 
     #hero {
-	    background-image: 
-	        linear-gradient(to bottom, black, transparent 30%),
-	        linear-gradient(to top, black, transparent 20%),
-	        url('img/bg.jpg');
+	    background-image: url('img/bg.jpg');
 		background-position: center 65%;
 	}
 }
