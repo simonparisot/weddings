@@ -1,0 +1,314 @@
+@font-face {
+	font-family: 'Kuenstler';
+	src: url('fonts/kuenstler-script-lt-std-2-old.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit;
+}
+
+section {
+    position: relative;
+    z-index: 2;
+    font-size: 1.6rem;
+    padding: 80px 20%;
+}
+
+section > h1 { 
+    font-size: 4.2rem; 
+    margin: 0 0 4rem 0;
+    font-family: 'Kuenstler', serif;
+}
+section h2 { 
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.6rem 0 0 0;
+    font-family: 'Kuenstler', serif;
+}
+
+.btnLg { 
+    padding: 15px 30px;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer !important;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    background-color: #cc6376;
+    color: #f8f8f1;
+    border: 3px solid #cc6376;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.btnLg:hover { 
+    border: 3px solid #f8f8f1;
+}
+
+.btnFixed {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+.inputLg {
+    padding: 15px 30px;
+    border-radius: 6px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    background-color: #eeeeee;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.btnGreyed { background-color: #CCCCCC; color: #444444; border: 3px solid #CCCCCC; }
+
+
+/* -----------------------   HERO   --------------------------- */
+
+#hero {
+    position: relative;
+    background-color: #000000;
+    background-image: 
+        linear-gradient(to bottom, black, transparent 30%),
+        linear-gradient(to top, black, transparent 20%),
+        url('img/bg9.jpg');
+    background-size: cover;
+    background-position: center 33%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    height: 100svh;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 6px #000;
+}
+
+#title {
+    position: absolute;
+    width: auto;
+    top: 4rem;
+    left: 4rem;
+    right: 4rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+}
+#subtitle { 
+    font-size: 1.2rem;
+    position: absolute;
+    width: auto;
+    bottom: 4rem;
+    left: 4rem;
+    right: 4rem;
+    font-weight: 400;
+}
+
+
+/* -----------------------   SAVE THE DATE   --------------------------- */
+
+section#savethedate {
+    background-color: #354739;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    box-shadow: 2px 2px 12px #000;
+    color: #f8f8f1;
+}
+
+section#savethedate > h1 {
+    color: #f8f8f1;
+    margin-bottom: 4rem;
+}
+
+.rsvp { display: none; }
+.currentQuestion { display: block; }
+
+.plan {
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* -----------------------   PROGRAM   --------------------------- */
+
+section#program { 
+    background: #eee;
+    color: #2d4737;
+    background: url("img/fabric_1.webp");
+}
+
+section#program h1, section#program h1 {
+    color: #2d4737;
+}
+
+/* -----------------------   INFO   --------------------------- */
+
+section#info { 
+    color: #f8f8f1;
+    background-color: #354739;
+}
+
+.info.right { padding-left:  60%; text-align: right; }
+.info.right img { height: 60px; float: right; margin-right: -85px; }
+.info.left { padding-right: 60%; text-align: left; }
+.info.left img { height: 60px; float: left; margin-left: -85px; }
+.info.left span { font-weight: 500; color: red; }
+
+/* -----------------------   PHOTOS   --------------------------- */
+
+section#photos { 
+    color: #2d4737;
+    background-color: #f8f8f1;
+}
+
+.s-gallery { 
+    background: darkgrey url("pattern3.png") repeat;
+    padding-top: 100px; padding-bottom: 100px;
+    z-index: 2;
+    border: 1px solid #aaa;
+}
+
+.gallery { display: flex; flex-wrap: wrap; }
+.gallery-item {
+    width: fit-content;
+    margin-right: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.gallery-img { width: 14rem; height: 14rem; background: center / cover no-repeat; border-radius: 10px; }
+.gallery-img#mairie { background-image: url("img/gallery-mairie.png"); }
+.gallery-img#preparation { background-image: url("img/gallery-preparation.png"); }
+.gallery-img#famille { background-image: url("img/gallery-famille.png"); }
+.gallery-img#couple { background-image: url("img/gallery-lesmariees.png"); }
+.gallery-img#ceremonie { background-image: url("img/gallery-ceremonie.png"); }
+.gallery-img#cocktail { background-image: url("img/gallery-cocktail.png"); }
+.gallery-img#diner { background-image: url("img/gallery-soiree.png"); }
+.gallery-img#kodak { background-image: url("img/gallery-kodak.png"); }
+.gallery-txt { font-size: 1rem; color: #222; }
+.gallery-txt h1 { font-size: 1.2rem; color: #000; margin: 10px 0 5px 0; }
+
+@media (max-width: 800px) {
+    .s-gallery .content p { font-size: 1.3rem; }
+}
+
+/* -----------------------   HOUSING   --------------------------- */
+
+section#housing {
+    color: #2d4737;
+    background-color: #ffffff;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8) ), url("img/buissons.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 36%;
+}
+
+/* -----------------------   LIST   --------------------------- */
+
+section#list { 
+    color: #f8f8f1;
+    background-color: #354739;
+}
+
+#list-container { 
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.list-item {
+    flex: 0 0 33.33%;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #555;
+}
+.box { 
+    min-height: 100%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.3);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box img { 
+    width: 100%; 
+    display: block;
+}
+.list-text { 
+    padding: 10px;
+    font-size: 1rem;
+}
+.list-text h1 { 
+    color: #000; 
+    margin: 0; 
+    padding: 0; 
+    font-size: 1.2rem;
+}
+.prix {
+    position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.6rem;
+  padding: 2px 10px;
+  background: rgba(255,255,255,.8);
+  border-radius: 4px;
+  font-weight: 500;
+  z-index: 1;
+}
+.offrir { 
+    color: #fff;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(255,255,255,.5);
+    padding-top: 100px;
+    z-index: 2;
+}
+.box:hover .offrir { display: block; }
+
+.custom { padding: 50px 20px; background: rgba(255,255,255,.9); }
+.custom input {
+  display: block;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: left;
+  border-radius: 6px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 220px;
+}
+.custom .btnLg { width: 220px; padding: 10px; font-size: 1.2rem; }
+.custom #custom_price {}
+.custom #custom_text {}
+
+/* -----------------------   MERCI   --------------------------- */
+
+#merci { font-size: 7rem; }
+#sub-merci { font-style: italic; text-decoration: none; }
+
+/* -----------------------   FOOTER   --------------------------- */
+
+footer {
+    position: relative;
+    background-color: #1a252f;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px; padding-bottom: 20px;
+    font-size: 0.8rem;
+    z-index: 2;
+}
+
+footer .fas { margin: 0 5px; }

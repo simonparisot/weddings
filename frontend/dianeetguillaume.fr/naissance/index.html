@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
+
+	<title>Diane & Gui | Liste de naissance</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="stylesheet" type="text/css" href="style.css?v2.0.7">
+	<link rel="stylesheet" type="text/css" href="style-mobile.css?v2.0.5">
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="payment.js"></script>
+    <script src="savethedate.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129355826-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-129355826-1');
+	</script>
+
+</head>
+<body>
+
+<section>
+	
+	<h1>Notre liste de naissance</h1>
+	<p>Chers amis,</p>
+	<p>Comme vous le savez certainement, nous avons accueilli une petite princesse le 6 Novembre 😊 Si vous souhaitez la gâter, vous trouverez ci-dessous quelques éléments que vous pouvez nous offrir.</p>
+	<p>Un grand merci 😍</p>
+
+    <div id="list-container">
+
+        <div class="list-item"><div class="box">
+            <div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+            <div class="prix" rel="price_1LdvLh2HPfCAPkeMCSpvOyoL">20 €</div>
+            <img src="img/list/deco.png" />
+            <div class="list-text">
+                <h1>De la jolie décoration</h1>
+             	Pour la magnifique chambre que Papa et Maman m'ont préparée 🥰
+            </div>
+        </div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LdwEs2HPfCAPkeMrrYV5UMr">40 €</div>
+    		<img src="img/list/manteau.png" />
+    		<div class="list-text">
+    			<h1>Un manteau chaud dans lequel passer l'hiver</h1>
+    			Bébé de Novembre  🥶 
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LdwI72HPfCAPkeM21S2saaE">60 €</div>
+    		<img src="img/list/biberons.jpeg" />
+    		<div class="list-text">
+    			<h1>Un kit de biberons</h1>
+    			Si je fais autant de repas que ma maman, cela devrait être utile 
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LdwJn2HPfCAPkeMfLjAVHs2">100 €</div>
+    		<img src="img/list/sac.jpg" />
+    		<div class="list-text">
+    			<h1>Un sac de randonnée/porte bébé</h1>
+    			pour être une traileuse comme papa avant de savoir marcher
+    		</div>
+    	</div></div>
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LdwLK2HPfCAPkeMR0XCdXhV">150 €</div>
+    		<img src="img/list/couffin.jpg" />
+    		<div class="list-text">
+    			<h1>Un couffin en osier</h1>
+    			Comme les vraies princesses !
+    		</div>
+    	</div></div>
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LdwMk2HPfCAPkeMIwowTIfu">200 €</div>
+    		<img src="img/list/siege.jpg" />
+    		<div class="list-text">
+    			<h1>Un siège auto hyper sécurisé</h1>
+    			Il parait que j'irai souvent dans le Pas-de-Calais en Twingo  😨
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LdwNq2HPfCAPkeMoEbuxyIv">300 €</div>
+    		<img src="img/list/poussette.jpg" />
+    		<div class="list-text">
+    			<h1>Une poussette extra-pliable</h1>
+    			Une histoire de coffre de Twingo encore  😉
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LdwPB2HPfCAPkeMKraF6ctz">450 €</div>
+    		<img src="img/list/litevol.png" />
+    		<div class="list-text">
+    			<h1>Un lit évolutif</h1>
+    			Pour bien dormir au moins jusqu'à mes 5 ans
+    		</div>
+    	</div></div>
+
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir custom">
+                <input id="custom_price" type="number" placeholder="montant (en €)" />
+                <input id="custom_text" type="text" placeholder="Un petit message ?" />
+                <div class="btnLg" onClick="displayPayment(this);">Offrir</div>
+            </div>
+    		<div class="prix" rel="">Montant libre</div>
+    		<img src="img/list/surprise.jpg" />
+    		<div class="list-text">
+    			<h1>Quelque chose de particulier que vous aimeriez nous offrir ?</h1>
+    		</div>
+    	</div></div>
+		
+
+    </div>
+
+</section>
+
+
+<footer>
+	Fait avec ♥ par <a href="mailto:parisot.simon@gmail.com">Simon</a> pour Diane & Guillaume<br>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+@media (orientation: portrait), (max-width: 800px) {
+
+	.nomobile { display: none; }
+	section {
+		padding: 60px 10%;
+		font-size: 1.2rem; 
+	}
+	section h1 { font-size: 3rem; line-height: 1; }
+	section h2 { font-size: 1.4rem; margin-top: 2rem; }
+	section h3 { font-size: 2rem; }
+	.btnLg { font-size: 1.2rem; }
+
+	section:nth-of-type(1) { padding: 0; }
+
+	.savethedate { width: 100%; height: auto; bottom: 14%; }
+	img#title, img#subtitle { width: 100%; }
+
+	section:nth-of-type(2) > h1 { margin-bottom: 2rem; }
+
+	.info.left, .info.right { padding: 0; text-align: left; }
+
+	.list-item { flex: 0 0 100%; padding: 10px 0; }
+
+	footer.section {
+		font-size: 0.8rem;
+		text-align: left;
+	}
+}

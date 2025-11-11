@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
+
+	<title>Maud & Arnaud</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="stylesheet" type="text/css" href="style.css?v2.0.4">
+	<link rel="stylesheet" type="text/css" href="style-mobile.css?v2.0.4">
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="payment.js"></script>
+    
+
+</head>
+<body>
+
+<section id="hero">
+	
+	<div class="hero-text">
+		<img id="title" 	class="nomobile" src="img/logo.png">
+		<img id="subtitle" 	class="nomobile" src="img/subtitle2.png">
+
+		<img id="title" 	class="onlymobile" src="img/logo-mobile.webp">
+		<img id="subtitle" 	class="onlymobile" src="img/subtitle2-mobile.webp">
+	</div>
+
+</section>
+
+<section id="savethedate">
+	
+	<h1 class="title">Serez-vous parmi nous ?</h1>
+
+		<p>Merci de nous indiquer votre présence avant le 1er mai 2024, <a href="https://forms.gle/o5qNbR7jMnR3mPXHA">en cliquant ici</a>.</p>
+
+</section>
+
+
+
+
+<section id="photos">
+
+	<h1 class="title">Photos et vidéos</h1>
+	
+    <p>Les oeuvres de notre photographe, <a href="https://www.photographyk.fr/">Thomas Brousmiche</a>, ainsi que le stand photo arriveront ici.</p>
+	
+    <p>Les oeuvres de notre vidéaste, <a href="https://corentinmarquet.fr/">Corentin Marquet</a>,  arriveront ici.</p>
+
+    <div class="gallery"></div>
+
+</section>
+
+<section id="program">
+
+	<h1 class="title">Quel est le programme ?</h1>
+	
+	<div class="info left">
+		<img src="img/eglise.png" class="nomobile">
+		<h2 class="subtitle">Cérémonie de mariage</h2>
+		<p>Notre messe de mariage sera célébrée le samedi 24 août 2024 à 14h30 à l'église Saint Sulpice,<br>rue Saint-Sulpice, 72110 Bonnétable</p>
+	</div>
+	
+	<div class="info right">
+		<img src="img/champagne.png" class="nomobile">
+		<h2 class="subtitle">Réception</h2>
+		<p>La réception commencera à 17h30 et ira jusqu'au bout de la nuit !<br>Rendez-vous au Château de Chéronne, <br>517 Chemin du Château, 72160 Tuffé-Val-de-Chéronne</p>
+	</div>
+	
+	<div class="info left">
+		<img src="img/brunch.png" class="nomobile">
+		<h2 class="subtitle">Brunch</h2>
+		<p>Le brunch aura lieu le dimanche 25 août 2024 au même endroit que la veille à partir de 11h <br>517 Chemin du Château, 72160 Tuffé-Val-de-Chéronne</p>
+	</div>
+
+    <a href="img/carte1.jpg"><img class="plan box" src="img/carte1.jpg"></a><br>
+    <p>Pour l'accès à Bonnétable et les environs, vous pouvez soit arriver en TGV au Mans (puis voiture), soit en TER à la Ferté Bernard (puis voiture) soit en voiture (sortie conseillée la Ferté Bernard sur l'autoroute)</p>
+
+    <a href="img/carte2.jpg"><img class="plan box" src="img/carte2.jpg"></a><br>
+    <p>Pour l'accès à l'église, le parking conseillé sera celui en face du château de Bonnétable. Des parkings alternatifs sont aussi représentés sur la carte</p>
+</section>
+
+<section id="housing">
+
+	<h1 class="title">Où loger ?</h1>
+	
+    <p>Vous trouverez <a href="https://www.chateau-cheronne.com/post/liste-des-h%C3%B4tels-%C3%A0-proximit%C3%A9-du-ch%C3%A2teau-de-ch%C3%A9ronne">ici</a> une liste de logements proches du lieu du mariage.</p>
+
+</section>
+
+<section id="list">
+	
+	<h1>Notre liste de mariage</h1>
+	<p>Chers amis, notre plus grand plaisir serait de compléter notre collection de magnets !</p>
+    <p>Si vous souhaitez nous faire un autre cadeau, vous trouverez ci-dessous quelques éléments de notre vie sportive et culinaire que vous pouvez nous offrir.</p>
+	<p>Si vous voulez nous aider à partir en lune de miel, il y a aussi possibilité de participer à nos billets d'avion et autres hôtels !</p>
+    <p>Un grand merci 😍</p>
+
+    <div id="list-container">
+
+        <div class="list-item"><div class="box">
+            <div class="offrir custom">
+                <input id="custom_price" type="hidden" value="10" />
+                <input id="custom_text" type="text" placeholder="Quel département ?" />
+                <input id="custom_img" type="hidden" value="img/gaulois.webp" />
+                <div class="btnLg" onClick="displayPayment(this);">Offrir</div>
+            </div>
+            <div class="prix" rel="">Inestimable</div>
+            <img src="img/gaulois.webp" />
+            <div class="list-text">
+                <h1>Départ'aimant "Le Gaulois" </h1>
+             	<span>Il nous manque: 08, 13, 17, 25, 36, 41, 42, 61, 64, 67, 76, 82 et 85</span>
+            </div>
+        </div></div>
+
+    	<div id="test" class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">30</span> €</div>
+    		<img src="img/pagaie.webp" />
+    		<div class="list-text">
+    			<h1>Une pagaie</h1>
+    			<span>PS: il y en a une là-bas sous le cocotier</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">40</span> €</div>
+    		<img src="img/switch.webp" />
+    		<div class="list-text">
+    			<h1>Jeu Switch "It Takes Two"</h1>
+    			<span>Parce qu'on a déjà fini Overcooked 2 ;)</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">40</span> €</div>
+    		<img src="img/aloadessert.webp" />
+    		<div class="list-text">
+    			<h1>Fourchettes à dessert "Aloa miroir"</h1>
+    			<span>Set de 6</span>
+    		</div>
+    	</div></div>
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">60</span> €</div>
+    		<img src="img/aloamiroir.webp" />
+    		<div class="list-text">
+    			<h1>Couteaux à fromage "Aloa miroir"</h1>
+    			<span>Parce que le fromage c'est la vie </span>
+    		</div>
+    	</div></div>
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">70</span> €</div>
+    		<img src="img/creuse.webp" />
+    		<div class="list-text">
+    			<h1>Assiettes creuses</h1>
+    			<span>Set de 6</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">70</span> €</div>
+    		<img src="img/dessert.webp" />
+    		<div class="list-text">
+    			<h1>Assiettes à dessert</h1>
+    			<span>Set de 6</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">85</span> €</div>
+    		<img src="img/plate.webp" />
+    		<div class="list-text">
+    			<h1>Assiettes plates </h1>
+    			<span>Set de 6</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">150</span> €</div>
+    		<img src="img/vase.jpg" />
+    		<div class="list-text">
+    			<h1>Vase </h1>
+    			<span>Pour les fleurs !</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">200</span> €</div>
+    		<img src="img/meuble.webp" />
+    		<div class="list-text">
+    			<h1>Meuble à vin</h1>
+    			<span>Pour une température optimale de dégustation</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">260</span> €</div>
+    		<img src="img/kayak.jpg" />
+    		<div class="list-text">
+    			<h1>Un kayak gonflable</h1>
+    			<span>Pour aller avec les pagaies !</span>
+    		</div>
+    	</div></div>
+		
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">300</span> €</div>
+    		<img src="img/bilig.webp" />
+    		<div class="list-text">
+    			<h1>Une crêpière Bilig</h1>
+    			<span>Pour être de vrais futurs bretons !</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">330</span> €</div>
+    		<img src="img/flute.jpg" />
+    		<div class="list-text">
+    			<h1>Flûtes à champagne en cristal</h1>
+    			<span>Pour servir le champagne avec les galettes ;)</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">500</span> €</div>
+    		<img src="img/robot.webp" />
+    		<div class="list-text">
+    			<h1>Un robot pâtissier</h1>
+    		<span>Monter les oeufs en neige à la main, c'est long</span>
+    		</div>
+    	</div></div>
+
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">500</span> €</div>
+    		<img src="img/tente.jpg" />
+    		<div class="list-text">
+    			<h1>Notre tente de bikepacking</h1>
+    			<span>Pour voyager léger sur les routes et les chemins d'Europe</span>
+    		</div>
+    	</div></div>
+
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">600</span> €</div>
+    		<img src="img/diner.webp" />
+    		<div class="list-text">
+    			<h1>Un dîner dans un 3 étoiles</h1>
+    			<span>Pour un repas en amoureux inoubliable !</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">750</span> €</div>
+    		<img src="img/retro.jpg" />
+    		<div class="list-text">
+    			<h1>Un rétroprojecteur</h1>
+    			<span>Pour savourer Grease et les Matchs du Racing sur grand écran !</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">780</span> €</div>
+    		<img src="img/plancha.webp" />
+    		<div class="list-text">
+    			<h1>Plancha club électrique</h1>
+    			<span>Pas d'été sans grillade pour savourer</span>
+    		</div>
+    	</div></div>
+
+    		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix"><span class="product_price">1500</span> €</div>
+    		<img src="img/mix.webp" />
+    		<div class="list-text">
+    			<h1>Thermomix</h1>
+    			<span>Pour cuisiner tout</span>
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir custom">
+                <input id="custom_price" type="number" placeholder="montant (en €)" />
+                <input id="custom_text" type="text" placeholder="Un petit message ?" />
+                <input id="custom_img" type="hidden" value="img/japon.webp" />
+                <div class="btnLg" onClick="displayPayment(this);">Offrir</div>
+            </div>
+    		<div class="prix" rel="">Montant libre</div>
+    		<img src="img/japon.webp" />
+    		<div class="list-text">
+    			<h1>Participation à la lune de miel</h1>
+    			<span>Nous irons au pays du Soleil Levant</span>
+    		</div>
+    	</div></div>
+
+    </div>
+
+</section>
+
+
+<footer>
+	Fait avec ♥ par <a href="mailto:parisot.simon@gmail.com">Simon</a> pour Maud & Arnaud <br>
+</footer>
+
+</body>
+
+</html>

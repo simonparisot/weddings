@@ -1,0 +1,11 @@
+{
+  "name": "savethedate",
+  "version": "1.0.0",
+  "description": "save the date store in ddb for christophe wedding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "parisot.simon@gmail.com",
+  "license": "ISC"
+}

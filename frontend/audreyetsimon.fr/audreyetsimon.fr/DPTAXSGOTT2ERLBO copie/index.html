@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bim Bam Boum</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+	<script type="text/javascript">         
+		$(document).ready(function() {
+			
+			$("#submit").click(function(e) {                 
+				e.preventDefault();                          
+				var name = $("#name").val();                          
+				
+				$.ajax({                     
+					type: "POST",                     
+					url: 'https://g7x10l3re5.execute-api.eu-west-1.amazonaws.com/prod',
+					contentType: 'application/json',      
+					data: JSON.stringify({                         
+						'name': name                  
+					}),                     
+					success: function(res){                         
+						$('#form-response').html('<div class="alert alert-info" role="alert">Félicitations, vous avez gagné le jeu du mariage 🤩😎</div>');
+					},                     
+					error: function(){
+						$('#form-response').html('<div class="alert alert-info" role="alert">Oups... quelque chose s\'est mal passé. Venez nous le dire !</div>');                     
+					}
+				});
+			})
+		});      
+	</script>
+
+	<style type="text/css">
+		body{
+			background-color: #111;
+			font-family: 'Playfair Display', serif;
+			color: #eee;
+			font-size: 1.4rem;
+			text-align: center;
+			padding: 0.2rem;
+		}
+
+		.stuff {
+			margin-top: 1rem;
+			width: 100%;
+			max-width: 680px;
+		}
+
+		input, button {
+			border-radius: 3px;
+			max-width: 400px;
+			font-size: 1.6rem;
+		}
+
+		button {
+			background-color:#fff000;
+			padding: 0.4rem 1rem;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="stuff">Bien joué !</div>
+	
+	<div class="stuff"><img src="wow.gif" style="width:100%;" /></div>
+
+	<div class="stuff"> 
+		<label for="name" class="control-label">Votre prénom et nom</label>
+	</div>
+		
+	<div class="stuff">
+		<input type="text" id="name" class="form-control" required> 
+	</div> 
+	
+	<div id="form-response" class="stuff"></div> 
+	
+	<div class="stuff">
+		<button class="btn btn-lg btn-primary btn-block" id="submit" type="submit">Envoyer</button>
+	</div>
+
+</body>
+</html>
+
+

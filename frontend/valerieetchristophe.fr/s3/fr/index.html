@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<!-- Page en français -->
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
+
+	<title>Valérie et Christophe</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="stylesheet" type="text/css" href="../style.css?v2.0.7">
+	<link rel="stylesheet" type="text/css" href="../style-mobile.css?v2.0.5">
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="../payment.js"></script>
+    <script src="../savethedate.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129355826-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-129355826-1');
+	</script>
+
+</head>
+<body>
+
+<section>
+	
+	<div class="savethedate">
+		<img id="title" src="../img/title.png">
+		<img id="subtitle" src="../img/subtitle_it_fr.png">
+	</div>
+
+</section>
+
+
+<section>
+
+	<h1 class="title">Serez-vous présents à notre mariage en Italie ?</h1>
+
+	<div class="rsvp q1 currentQuestion">
+		<div class="btnLg btnFixed" onClick="rsvpNext('.q2');">Oui bien sûr !</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.ko-q2');">Non malheureusement</div>
+	</div>
+
+
+	<div class="rsvp ko-q2">
+		<p>Oh :(<br>Quel est votre nom ?</p>
+		<input class="inputLg btnFixed" type="text" id="guestName-ko" required placeholder="Jean Valjean">
+		<div class="btnLg btnFixed" onClick="rsvpNext('.ko','name', document.querySelector('#guestName-ko').value);">Continuer</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
+	</div>
+
+	<div class="rsvp ko">
+		<p>C'est enregistré, merci !</p>
+	</div>
+
+
+	<div class="rsvp q2">
+		<p>Parfait ! Quel est votre nom ?</p>
+		<input class="inputLg btnFixed" type="text" id="guestName" required placeholder="Jean Valjean">
+		<div class="btnLg btnFixed" onClick="rsvpNext('.q3','name', document.querySelector('#guestName').value);">Continuer</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q1');">Retour</div>
+	</div>
+
+	<div class="rsvp q3">
+		<p>Combien serez-vous ?</p>
+		<input class="inputLg btnFixed" type="number" id="guestNb" required maxlength="1">
+		<div class="btnLg btnFixed" onClick="rsvpNext('.q4','nb', document.querySelector('#guestNb').value);">Continuer</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q2');">Retour</div>
+	</div>
+
+	<div class="rsvp q4">
+		<p>Et pour finir, quelle est votre adresse postale ?</p>
+		<input class="inputLg btnFixed" type="text" id="guestAddress" required placeholder="1 rue Grand rue, Cherbourg">
+		<div class="btnLg btnFixed" onClick="rsvpNext('.ok','address', document.querySelector('#guestAddress').value);">Envoyer</div>
+		<div class="btnLg btnFixed btnGreyed" onClick="rsvpNext('.q3');">Retour</div>
+	</div>
+
+	<div class="rsvp ok">
+		<p>C'est enregistré, merci beaucoup !</p>
+	</div>
+
+	<div class="rsvp error">
+		<p>Aie, une erreur... je n'ai pas pu enregistrer les informations. Pourriez-vous me le signaler par email ?</p>
+	</div>
+
+	
+</section>
+
+<section>
+
+</section>
+
+<section>
+
+	<h1 class="title">Quel est le programme ?</h1>
+	
+	<div class="info left">
+		<img src="../img/ceremonie.png" class="nomobile">
+		<h2 class="subtitle">Cérémonie religieuse</h2>
+		<p>La cérémonie religieuse se déroulera en Italie <br>le samedi 3 juin 2023,<br> à la paroisse San Matteo Apostolo, <br>Piazza della Madonna 1, Villa Guardia, <br>18027 Pontedassio (IM), Italie<br>
+	</div>
+	
+
+	
+	<div class="info right">
+		<img src="../img/champagne2.png" class="nomobile">
+		<h2 class="subtitle">Dîner</h2>
+		<p>Ambiance plus détendue autour d'une flûte de Prosecco puis d'un repas placé à la Villa Roseto,<br> Via Fanny Roncati Carli 19, <br>18100 Imperia (IM), Italie<br></p>
+	</div>
+	
+	
+	<div class="info left">
+		<img src="../img/brunch.png" class="nomobile">
+		<h2 class="subtitle">Brunch</h2>
+		<p>Un brunch est organisé <br>le lendemain midi, dimanche 4 juin 2023, <br>à Diano Marina (IM), Italie<br></p>
+	</div>
+	
+	<!-- <div class="info right">
+		<img src="../img/ceremonie.png" class="nomobile">
+		<h2 class="subtitle">Cérémonie religieuse</h2>
+		<p>La cérémonie religieuse <br>se déroulera en Italie <br>le samedi 3 juin 2023,<br> à Villa Guardia, Imperia<br></p>
+	</div> -->
+	
+    <!-- <img class="plan box" src="../img/plan.jpg">
+    <p>Les différents lieux de la journée sont proches les uns des autres, il est tout à fait possible de ne se déplacer qu’à pied.</p>-->
+</section> 
+
+<section class="section s-hotel">
+		<h1 class="title">Où loger ?</h1>
+		<p>Vous trouverez aux alentours d'Imperia différentes propositions d'hébergements sur 
+		<a target="_blank" href="https://www.airbnb.fr/s/Imperia--IM/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&date_picker_type=calendar&query=Imperia%2C%20Ligurie%2C%20Italie&place_id=ChIJ5T9PYihs0hIRBLseHjN2Jqw&checkin=2023-06-03&checkout=2023-06-04&source=structured_search_input_header&search_type=autocomplete_click">Airbnb</a>, 
+		<a target="_blank" href="https://www.booking.com/searchresults.fr.html?checkin_monthday=3&ac_suggestion_list_length=5&sb_lp=1&dest_type=city&sb=1&is_ski_area=&group_adults=2&label=gen173nr-1DCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQ_YAQPoAQH4AQOIAgGoAgO4AvmJwZYGwAIB0gIkYjAwMjliOTctZDBhNi00NmU4LTg0NDMtZGEzN2M1ODMwMDZj2AIE4AIB&error_url=https%3A%2F%2Fwww.booking.com%2Findex.fr.html%3Flabel%3Dgen173nr-1DCAEoggI46AdIDVgEaE2IAQGYAQ24ARfIAQ_YAQPoAQH4AQOIAgGoAgO4AvmJwZYGwAIB0gIkYjAwMjliOTctZDBhNi00NmU4LTg0NDMtZGEzN2M1ODMwMDZj2AIE4AIB%26sid%3Dc36dcc435614e7661f4f82155020f801%26sb_price_type%3Dtotal%26%26&ss_raw=imperia&sid=c36dcc435614e7661f4f82155020f801&src=index&checkout_month=6&checkout_monthday=4&search_selected=true&checkin_year=2023&auth_success=1&search_pageview_id=2408743cec110847&ac_langcode=fr&ac_click_type=b&place_id_lon=8.03375&ac_position=0&dest_id=-119237&b_h4u_keep_filters=&place_id_lat=43.8882&from_sf=1&checkin_month=6&ac_suggestion_theme_list_length=0&checkout_year=2023&src_elem=sb&no_rooms=1&ss=Imperia%2C+Ligurie%2C+Italie&group_children=0">Booking.com</a>
+		et <a target="_blank" href="https://www.casevacanza.it/search/5adf4762948df?arrival=2023-06-03&duration=1&hl=fr_FR">CaseVacanza</a>.</p>
+		
+
+</section>
+
+
+
+<section>
+	
+	<h1>Notre liste de mariage</h1>
+	<p>Chers amis, notre plus grand plaisir serait de partir en Lune de Miel en Polynésie en 2023 en pensant à vous 😊</p>
+    <p>Si vous souhaitez nous faire un cadeau, vous trouverez ci-dessous quelques éléments de notre voyage de noces que vous pouvez nous offrir.</p>
+	<p>Et si vous voulez nous aider à finir d'aménager notre appartement, il y a aussi des idées cadeaux pour vous!</p>
+    <p>Un grand merci 😍</p>
+
+    <div id="list-container">
+
+        <div class="list-item"><div class="box">
+            <div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+            <div class="prix" rel="price_1LGPnj2EVnc8AHFkHYH1z6M7">20 €</div>
+            <img src="../img/list/cocktail.jpg" />
+            <div class="list-text">
+                <h1>Deux cocktails à partager au bord de la plage </h1>
+             à Fakarava
+            </div>
+        </div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGPoJ2EVnc8AHFkPs2tmRjn">25 €</div>
+    		<img src="../img/list/guide.jpg" />
+    		<div class="list-text">
+    			<h1>Un guide de Polynésie</h1>
+    			Et des Marquises
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGPou2EVnc8AHFkujvxmYGm">50 €</div>
+    		<img src="../img/list/verres.jpg" />
+    		<div class="list-text">
+    			<h1>Un jeu de verres à Bordeaux Riedel</h1>
+    			La marque préférée de Valérie
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGQa42EVnc8AHFkmPEQwENG">50 €</div>
+    		<img src="../img/list/coupes.jpg" />
+    		<div class="list-text">
+    			<h1>Un jeu de flûtes à champagne Riedel</h1>
+    			Les bulles, c'est notre passion
+    		</div>
+    	</div></div>
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGQbk2EVnc8AHFkH7FVk9Rn">50 €</div>
+    		<img src="../img/list/interile.jpg" />
+    		<div class="list-text">
+    			<h1>Une sortie en kayak entre deux îles</h1>
+    			Les bras de Valérie adorent ce sport!
+    		</div>
+    	</div></div>
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGQcK2EVnc8AHFk1ALFR1jR">80 €</div>
+    		<img src="../img/list/bibliotheque.jpg" />
+    		<div class="list-text">
+    			<h1>Une participation à notre bibliothèque</h1>
+    			Et faire disparaître nos cartons de livres dans le salon
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGQcw2EVnc8AHFk2IsYzxln">100 €</div>
+    		<img src="../img/list/avion.jpg" />
+    		<div class="list-text">
+    			<h1>1000 km en avion pour partir dans le Pacifique</h1>
+    			Et survoler l'eau turquoise
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGXv02EVnc8AHFk8CIlkn9E">100 €</div>
+    		<img src="../img/list/plongee.jpg" />
+    		<div class="list-text">
+    			<h1>Une sortie de plongée</h1>
+    			Dans un des plus beau spot du monde
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGXvm2EVnc8AHFk7NhofvjX">120 €</div>
+    		<img src="../img/list/restaurant.jpg" />
+    		<div class="list-text">
+    			<h1>Un dîner romantique seuls sur la plage</h1>
+    			Avec les pieds dans le sable
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGXwb2EVnc8AHFkcBgplROE">180 €</div>
+    		<img src="../img/list/hotel.jpg" />
+    		<div class="list-text">
+    			<h1>Une nuit dans un hôtel de rêve</h1>
+    			Avec les pieds dans l'eau
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGXxD2EVnc8AHFkr0XbFMJb">200 € </div>
+    		<img src="../img/list/ile.jpg" />
+    		<div class="list-text">
+    			<h1>Deux jours sur une île déserte</h1>
+    			Soleil, mer et calme
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGXxz2EVnc8AHFk5zqgv281">300 €</div>
+    		<img src="../img/list/hawai.jpg" />
+    		<div class="list-text">
+    			<h1>Un détour par Hawaï</h1>
+    			Pour voir Mauna Kea et Kauai
+    		</div>
+    	</div></div>
+		
+		
+		<div class="list-item"><div class="box">
+    		<div class="offrir"><span class="btnLg" onClick="displayPayment(this);">Offrir</span></div>
+    		<div class="prix" rel="price_1LGXyW2EVnc8AHFk7YySDTr4">320 €</div>
+    		<img src="../img/list/chaise.png" />
+    		<div class="list-text">
+    			<h1>Une chaise Edito bleu velour</h1>
+    			Pour ne plus manger par terre
+    		</div>
+    	</div></div>
+
+    	<div class="list-item"><div class="box">
+    		<div class="offrir custom">
+                <input id="custom_price" type="number" placeholder="montant (en €)" />
+                <input id="custom_text" type="text" placeholder="Un petit message ?" />
+                <div class="btnLg" onClick="displayPayment(this);">Offrir</div>
+            </div>
+    		<div class="prix" rel="">Montant libre</div>
+    		<img src="../img/list/surprise.jpg" />
+    		<div class="list-text">
+    			<h1>Quelque chose de particulier que vous aimeriez nous offrir ?</h1>
+    		</div>
+    	</div></div>
+		
+
+    </div>
+
+</section>
+
+
+<footer>
+	Fait avec ♥ par <a href="mailto:parisot.simon@gmail.com">Simon</a> pour Valérie et Christophe<br>
+</footer>
+
+</body>
+
+</html>

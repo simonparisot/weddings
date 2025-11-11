@@ -1,0 +1,171 @@
+@font-face {
+	font-family: 'Athletics';
+	src: url('fonts/athletics-regular.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Athletics';
+	src: url('fonts/athletics-bold.otf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Stray Bullets';
+	src: url('fonts/straybullets-smooth.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* GENERIC STYLE
+-------------------------------------------------- */
+
+body { background-color: #000; margin: 0; padding: 0; }
+a { text-decoration: underline; color: inherit;  }
+p { margin-top: 0.2rem; }
+
+section {
+	position: relative;
+	z-index: 2;
+	font: 1.6rem "Athletics", sans-serif;
+	padding: 80px 20%;
+
+}
+
+section > h1 { font: 4.6rem "Stray Bullets", cursive, sans-serif; margin: 0 0 20px 0; }
+section h2 { font: 1.6rem "Athletics", sans-serif; font-weight: bold; margin: 0.6rem 0 0 0; }
+
+.btnLg { 
+  padding: 15px 30px;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+  background-color: #E1B454;
+  font: 1.6rem "Athletics", sans-serif;
+  border: 3px solid #E1B454;
+  text-decoration: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+.btnLg:hover { border: 3px solid black; }
+
+.btnFixed {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+}
+
+.inputLg {
+  padding: 15px 30px;
+  border-radius: 6px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+  background-color: #EEEEEE;
+  font: 1.6rem "Athletics", sans-serif;
+}
+
+.btnGreyed { background-color: #CCCCCC; color: #444444; border: 3px solid #CCCCCC; }
+
+.savethedate { position: absolute; height: 100%; }
+.savethedate img { display: block; }
+img#title { width: 30%; }
+img#subtitle { width: 25%; }
+
+/* -------------------------------------------------- */
+
+section:nth-of-type(1) {
+  background: repeat url(img/bg3.png);
+  padding-bottom: 50px;
+  padding-top: 50px;
+  min-height: 100vh;;
+}
+
+section:nth-of-type(1) > h1 { margin-bottom: 4rem; }
+
+#list-container { 
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+.list-item {
+	flex: 0 0 33.33%;
+	overflow: hidden;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.box { 
+	background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 9px rgba(0,0,0,.3);
+    overflow: hidden;
+    position: relative;
+}
+.box img { 
+	width: 100%; 
+	display: block;
+}
+.list-text { 
+	color: #555;
+	padding: 10px;
+	font-size: 1rem;
+}
+.list-text h1 { 
+	color: #000; 
+	margin: 0; 
+	padding: 0; 
+	font-size: 1.2rem;
+}
+.prix {
+	position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1rem;
+  padding: 2px 10px;
+  background: rgba(255,255,255,.8);
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 1;
+}
+.offrir { 
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(255,255,255,.5);
+	padding-top: 100px;
+	z-index: 2;
+}
+.box:hover .offrir { display: block; }
+
+.custom { padding: 50px 20px; background: rgba(255,255,255,.9); }
+.custom input {
+  display: block;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: left;
+  border-radius: 6px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 220px;
+}
+.custom .btnLg { width: 220px; padding: 10px; font-size: 1.2rem; }
+.custom #custom_price {}
+.custom #custom_text {}
+
+/* -------------------------------------------------- */
+
+footer {
+	position: relative;
+	background-color: #1a252f;
+	color: #fff;
+	text-align: center;
+	padding-top: 20px; padding-bottom: 20px;
+	font: 0.8rem "Athletics", sans-serif;
+	z-index: 2;
+}
+
+footer .fas { margin: 0 5px; }
