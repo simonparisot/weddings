@@ -1,2 +1,69 @@
-.DS_Store
+# Dependencies
+node_modules/
+node_modules.zip
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Site configuration (contains keys and endpoints)
+*/config.json
+config/*.json
+!config/*.example.json
+
+# AWS configuration
+.aws/
+credentials
+
+# Stripe keys (just in case)
+*stripe*key*
+*secret*
+
+# Lambda deployment packages
+*.zip
 code.zip
+deployment.zip
+
+# Local configuration
+config.local.js
+config.local.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+*.log
+*.pid
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Testing
+coverage/
+.nyc_output/
+
+# Secrets scan results
+secrets-to-remove.txt
