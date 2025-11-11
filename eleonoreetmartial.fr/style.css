@@ -1,15 +1,8 @@
-@font-face {
-	font-family: 'Kuenstler';
-	src: url('fonts/kuenstler-script-lt-std-2-old.otf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
 body {
     margin: 0;
     padding: 0;
     background-color: #000;
-    font-family: "EB Garamond", serif;
+    font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -22,20 +15,20 @@ a {
 section {
     position: relative;
     z-index: 2;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     padding: 80px 20%;
 }
 
 section > h1 { 
-    font-size: 4.2rem; 
+    font-size: 3rem; 
     margin: 0 0 4rem 0;
-    font-family: 'Kuenstler', serif;
+    font-family: 'EB Garamond', serif;
 }
 section h2 { 
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0.6rem 0 0 0;
-    font-family: 'Kuenstler', serif;
+    font-family: 'EB Garamond', serif;
 }
 
 .btnLg { 
@@ -44,15 +37,15 @@ section h2 {
     margin-top: 20px;
     cursor: pointer !important;
     box-shadow: 2px 2px 5px rgba(0,0,0,.2);
-    background-color: #cc6376;
-    color: #f8f8f1;
-    border: 3px solid #cc6376;
+    background-color: #f4d6a0;
+    color: #2f4b66;
+    border: 3px solid #f4d6a0;
     box-sizing: border-box;
     display: inline-block;
 }
 
 .btnLg:hover { 
-    border: 3px solid #f8f8f1;
+    border: 3px solid #2d4737;
 }
 
 .btnFixed {
@@ -72,7 +65,7 @@ section h2 {
     font-family: inherit;
 }
 
-.btnGreyed { background-color: #CCCCCC; color: #444444; border: 3px solid #CCCCCC; }
+.btnGreyed { background-color: #cccccc; color: #2f4b66; border: 3px solid #cccccc; }
 
 
 /* -----------------------   HERO   --------------------------- */
@@ -83,17 +76,18 @@ section h2 {
     background-image: 
         linear-gradient(to bottom, black, transparent 30%),
         linear-gradient(to top, black, transparent 20%),
-        url('img/bg9.jpg');
+        url('img/bg.jpg');
     background-size: cover;
-    background-position: center 33%;
+    background-position: center 65%;
     background-repeat: no-repeat;
     height: 100vh;
     height: 100svh;
     box-sizing: border-box;
     overflow: hidden;
     text-align: center;
-    color: #fff;
+    color: #f4d6a0;
     text-shadow: 0 0 6px #000;
+    font-family: 'EB Garamond', serif;
 }
 
 #title {
@@ -106,7 +100,7 @@ section h2 {
     line-height: 2.6rem;
 }
 #subtitle { 
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     position: absolute;
     width: auto;
     bottom: 4rem;
@@ -119,15 +113,14 @@ section h2 {
 /* -----------------------   SAVE THE DATE   --------------------------- */
 
 section#savethedate {
-    background-color: #354739;
+    background-color: #2f4b66;
     padding-bottom: 50px;
     padding-top: 50px;
     box-shadow: 2px 2px 12px #000;
-    color: #f8f8f1;
+    color: #faf8f4;
 }
 
 section#savethedate > h1 {
-    color: #f8f8f1;
     margin-bottom: 4rem;
 }
 
@@ -144,7 +137,6 @@ section#savethedate > h1 {
 section#program { 
     background: #eee;
     color: #2d4737;
-    background: url("img/fabric_1.webp");
 }
 
 section#program h1, section#program h1 {
@@ -154,8 +146,8 @@ section#program h1, section#program h1 {
 /* -----------------------   INFO   --------------------------- */
 
 section#info { 
-    color: #f8f8f1;
-    background-color: #354739;
+    color: #faf8f4;
+    background-color: #2f4b66;
 }
 
 .info.right { padding-left:  60%; text-align: right; }
@@ -167,56 +159,22 @@ section#info {
 /* -----------------------   PHOTOS   --------------------------- */
 
 section#photos { 
+    background: #eee;
     color: #2d4737;
-    background-color: #f8f8f1;
-}
-
-.s-gallery { 
-    background: darkgrey url("pattern3.png") repeat;
-    padding-top: 100px; padding-bottom: 100px;
-    z-index: 2;
-    border: 1px solid #aaa;
-}
-
-.gallery { display: flex; flex-wrap: wrap; }
-.gallery-item {
-    width: fit-content;
-    margin-right: 1.6rem;
-    margin-bottom: 1.6rem;
-}
-
-.gallery-img { width: 14rem; height: 14rem; background: center / cover no-repeat; border-radius: 10px; }
-.gallery-img#mairie { background-image: url("img/gallery-mairie.png"); }
-.gallery-img#preparation { background-image: url("img/gallery-preparation.png"); }
-.gallery-img#famille { background-image: url("img/gallery-famille.png"); }
-.gallery-img#couple { background-image: url("img/gallery-lesmariees.png"); }
-.gallery-img#ceremonie { background-image: url("img/gallery-ceremonie.png"); }
-.gallery-img#cocktail { background-image: url("img/gallery-cocktail.png"); }
-.gallery-img#diner { background-image: url("img/gallery-soiree.png"); }
-.gallery-img#kodak { background-image: url("img/gallery-kodak.png"); }
-.gallery-txt { font-size: 1rem; color: #222; }
-.gallery-txt h1 { font-size: 1.2rem; color: #000; margin: 10px 0 5px 0; }
-
-@media (max-width: 800px) {
-    .s-gallery .content p { font-size: 1.3rem; }
 }
 
 /* -----------------------   HOUSING   --------------------------- */
 
 section#housing {
+    background: #eee;
     color: #2d4737;
-    background-color: #ffffff;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8) ), url("img/buissons.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center 36%;
 }
 
 /* -----------------------   LIST   --------------------------- */
 
 section#list { 
-    color: #f8f8f1;
-    background-color: #354739;
+    color: #faf8f4;
+    background-color: #2f4b66;
 }
 
 #list-container { 
@@ -307,7 +265,7 @@ footer {
     color: #fff;
     text-align: center;
     padding-top: 20px; padding-bottom: 20px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     z-index: 2;
 }
 
